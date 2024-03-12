@@ -24,7 +24,6 @@ n = int(input())
 for i in range(n):
     num_v = int(input())
     v_to = [0,]
-    v_to = [0,]
     v_to.extend(list(map(int, input().strip().split(' '))))
     visited = []
     count = 0

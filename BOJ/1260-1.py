@@ -1,63 +1,63 @@
-########################################
-# 23-12-14
-# [중요] BFS 는 deque(queue) 를 이용, DFS 는 recursive 또는 stack 을 이용하는 것으로 알고있었다. 
-# 그러나 DFS stack 을 이용할 경우 순회는 모두 되지만, 순서가 지켜지지 않는 오류가 있음을 발견함. → 아래 dfs recursive 코드 참조
+#
+# 24-03-11
+# DFS - recursive, stack
+# BFS - queue(deque)
+# 
+
 import sys
 from collections import deque
 sys_input = sys.stdin.readline
 
-num_vertex, num_edge, start = map(int, sys_input().split())
-graph = [[0 for _ in range(num_vertex + 1)] for _ in range(num_vertex + 1)]
-for _ in range(num_edge):
+num_v, num_e, start_v = map(int, sys_input().split())
+
+graph = [[0 for _ in range(num_v + 1)] for _ in range(num_v + 1)]
+for _ in range(num_e):
     a, b = map(int, sys_input().split())
     graph[a][b] = 1
     graph[b][a] = 1
 
-# dfs - recursive
-dfs_visited1 = []
+# DFS - recursive
+dfs_visited_rec = []
+
 def dfs(cur_v):
-    dfs_visited1.append(cur_v)
-    for next_v in range(1, num_vertex+1):
-        if graph[cur_v][next_v] == 1 and next_v not in dfs_visited1:
+    dfs_visited_rec.append(cur_v)
+    for next_v in range(1, num_v + 1):
+        if graph[cur_v][next_v] == 1 and next_v not in dfs_visited_rec:
             dfs(next_v)
-dfs(start)
-print(*dfs_visited1)
 
-# [순서 오류] dfs - stack(deque) (1)
-# 방문 순서가 지켜지지 않음 → 단순히 deque 을 queue 에서 stack 으로 사용한다고 dfs 가 되는 게 아니었음
-dfs_visited2 = []
-dfs_visited2.append(start)
-to_visit = deque()
-to_visit.append(start)
-while(to_visit):
-    cur_v = to_visit.pop()
-    for next_v in reversed(range(1, num_vertex + 1)):
-        if graph[cur_v][next_v] == 1 and next_v not in dfs_visited2:
-            dfs_visited2.append(next_v)
-            to_visit.append(next_v)
-print(*dfs_visited2)
+dfs(start_v)
+print(*dfs_visited_rec)
 
-# dfs - stack(deque) (2)
-dfs_visited3 = []
-to_visit = deque()
-to_visit.append(start)
+
+# DFS - stack
+# BFS queue 와 동일하게 코드를 작성하면 문제 조건의 순회 순서를 지키지 못함
+# 따라서 다음 조건을 추가하여 해결함
+# 1. to_visit pop 된 다음에 visited 에 추가
+# 2. to_visit append 하기 전에, next_v 가 이미 to_visit 에 있다면 remove
+
+dfs_visited_stk = []
+to_visit = []
+to_visit.append(start_v)
+
 while to_visit:
     cur_v = to_visit.pop()
-    if cur_v in dfs_visited3: continue
-    dfs_visited3.append(cur_v)
-    for next_v in reversed(range(1, num_vertex + 1)):
-        if graph[cur_v][next_v] == 1 and next_v not in dfs_visited3:
+    dfs_visited_stk.append(cur_v)
+    for next_v in range(num_v, 0, -1):
+        if graph[cur_v][next_v] == 1 and next_v not in dfs_visited_stk:
+            if next_v in to_visit:
+                to_visit.remove(next_v)
             to_visit.append(next_v)
-print(*dfs_visited3)
 
-# bfs - queue(deque)
+print(*dfs_visited_stk)
+
+# BFS - queue(deque)
 bfs_visited = []
-bfs_visited.append(start)
+bfs_visited.append(start_v)
 to_visit = deque()
-to_visit.append(start)
+to_visit.append(start_v)
 while(to_visit):
     cur_v = to_visit.popleft()
-    for next_v in range(1, num_vertex + 1):
+    for next_v in range(1, num_v + 1):
         if graph[cur_v][next_v] == 1 and next_v not in bfs_visited:
             bfs_visited.append(next_v)
             to_visit.append(next_v)
