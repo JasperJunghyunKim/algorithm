@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0940c7647a959f94",
+        "id": "fc84db7930d45d72",
         "type": "tabs",
         "children": [
           {
-            "id": "6acf5af9fd5014de",
+            "id": "c0ee7f56cc9ff0ce",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,8 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6acf5af9fd5014de",
+  "active": "c0ee7f56cc9ff0ce",
   "lastOpenFiles": [
+    "BOJ/1780-1.py",
+    "BOJ/1780-2.py",
+    "BOJ/1780-2.Py",
+    "README.md",
     "BOJ/7569-2.py",
     "BOJ/1697-2.py",
     "BOJ/10451-2.py",
@@ -155,9 +159,6 @@
     "BOJ/10989-1.py",
     "BOJ/2751-1.py",
     "BOJ/Untitled-1",
-    "BOJ/2750-1.py",
-    "2750-1.py",
-    "BOJ/1914-1.py",
-    "BOJ/1914-2.py"
+    "BOJ/2750-1.py"
   ]
 }
