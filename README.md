@@ -1,4 +1,19 @@
 
+###### 문제
+- [BOJ 14500](https://www.acmicpc.net/problem/14500)
+	- DFS 재귀 전후 visited check 조건
+- [BOK]()
+- 
+
+
+###### 23-03-16
+* 참조형 vs (?) / 그리고 전역 범위
+* swap 한번에
+* combination, perm
+* max(2D graph)
+* BFS, DFS 꼴 복습
+* 'meetings.sort(key=lambda x: (x[1], x[0]))'
+* 
 
 ###### 23-03-15
 - BFS, DFS
