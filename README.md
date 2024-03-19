@@ -1,4 +1,17 @@
 
+##### 24-03-19
+- DFS 와 백트래킹
+	- 여행경로
+	- N Queen
+	- N 과 M
+* dict keys
+* 집합 ... iter 종류 재확인
+* https://medium.com/@chullino/if-name-main-%EC%9D%80-%EC%99%9C-%ED%95%84%EC%9A%94%ED%95%A0%EA%B9%8C-bc48cba7f720
+* DP 시, bottom up, top down 적합 조건
+* combination, permutation
+* 
+
+
 - 전역 참조가 불가하면 list[0] 인덱스를 사용하는 방법
 - 최단거리는 BFS / 다익스트라 사용
 	DFS(깊이 우선 탐색)를 사용하여 최단 거리 문제를 해결할 때 성능이 좋지 않은 주된 이유는, DFS가 모든 가능한 경로를 탐색하기 때문에 비효율적으로 많은 시간을 소모할 수 있기 때문입니다. 특히, 최단 거리를 찾는 문제의 경우에는 더욱 그렇습니다. 다음은 DFS 사용 시 성능이 좋지 않은 구체적인 이유들입니다:
