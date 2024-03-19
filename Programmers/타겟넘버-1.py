@@ -1,6 +1,6 @@
 from collections import deque
 
-def solution(numbers, target ):
+def solution(numbers, target):
     answer = 0
 
     number_stack = deque()

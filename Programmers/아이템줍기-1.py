@@ -1,3 +1,7 @@
+#
+# 실패
+#
+
 from collections import deque
 
 def solution(rectangle, characterX, characterY, itemX, itemY):
