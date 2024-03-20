@@ -148,17 +148,17 @@
   },
   "active": "c0ee7f56cc9ff0ce",
   "lastOpenFiles": [
-    "BOJ/2156-1.py",
-    "Programmers/2156-1.py",
-    "Programmers/도둑질-1.py",
-    "Programmers/등굣길-2.py",
-    "Programmers/등굣길-1.py",
-    "Programmers/정수삼각형-2.py",
-    "Programmers/정수삼각형-1.py",
-    "Programmers/N으로표현-1.py",
-    "Programmers/여행경로-4.py",
-    "Programmers/여행경로-3.py",
-    "Programmers/여행경로-1.py",
+    "Programmers/순위-1.py",
+    "Programmers/가장먼노드-2.py",
+    "template/sort_merge_sort.py",
+    "template/dijkstra.py",
+    "template/dijk.py",
+    "template/dfs.py",
+    "template/bfs.py",
+    "template",
+    "templates/dijk.py",
+    "templates/dijkstra.py",
+    "templates/sort_merge_sort.py",
     "README.md"
   ]
 }

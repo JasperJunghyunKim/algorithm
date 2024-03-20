@@ -5,11 +5,13 @@
 	- N Queen
 	- N 과 M
 * dict keys
+* dict items
+* dict values>
 * 집합 ... iter 종류 재확인
 * https://medium.com/@chullino/if-name-main-%EC%9D%80-%EC%99%9C-%ED%95%84%EC%9A%94%ED%95%A0%EA%B9%8C-bc48cba7f720
 * DP 시, bottom up, top down 적합 조건
 * combination, permutation
-* 
+* list.count
 
 
 - 전역 참조가 불가하면 list[0] 인덱스를 사용하는 방법
