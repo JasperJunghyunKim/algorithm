@@ -1,6 +1,7 @@
 #
 # 24-03-11
 # Top Down, Recursive
+# 점화식이 아래와 같이 나오는 이유 : https://jyami.tistory.com/15
 #
 
 import sys

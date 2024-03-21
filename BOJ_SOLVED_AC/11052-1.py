@@ -1,14 +1,14 @@
-# ########################################
-# # Bottom Up
-# import sys
-# n = int(sys.stdin.readline().strip())
-# price_list = [0] + list(map(int, sys.stdin.readline().strip().split()))
-# max_price_list = [0, price_list[1], ]
+########################################
+# Bottom Up
+import sys
+n = int(sys.stdin.readline().strip())
+price_list = [0] + list(map(int, sys.stdin.readline().strip().split()))
+max_price_list = [0, price_list[1], ]
 
-# for i in range(2, n + 1):
-#     max_price_list.append(max([price_list[i], *[max_price_list[j] + max_price_list[i-j] for j in range(1, i//2 + 1)]]))
+for i in range(2, n + 1):
+    max_price_list.append(max([price_list[i], *[max_price_list[j] + max_price_list[i-j] for j in range(1, i//2 + 1)]]))
 
-# print(max_price_list[n])
+print(max_price_list[n])
 
 
 ########################################

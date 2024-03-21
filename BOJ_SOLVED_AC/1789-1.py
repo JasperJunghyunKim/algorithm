@@ -1,3 +1,5 @@
+# 숫자 N 을 -> N = 1 + 2 + 3 + ... + a 이 될 때까지
+
 n = int(input().strip())
 
 natural = [n,]
@@ -11,5 +13,6 @@ while True:
         natural.append(temp)
         natural.append(end - temp)
         temp += 1
+    # print(natural)
 
 print(len(natural))

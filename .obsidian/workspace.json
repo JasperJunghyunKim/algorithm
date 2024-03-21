@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fc84db7930d45d72",
+        "id": "8fb2c4e49d07e952",
         "type": "tabs",
         "children": [
           {
-            "id": "c0ee7f56cc9ff0ce",
+            "id": "93f2e7bafe8ac60c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "00cf065f3604c867",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "template/Categories.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "template/Categories.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "template/Categories.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "template/Categories.md"
               }
             }
           }
@@ -146,19 +159,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c0ee7f56cc9ff0ce",
+  "active": "00cf065f3604c867",
   "lastOpenFiles": [
-    "Programmers/다리를지나는트럭-1.py",
-    "Programmers/주식가격-1.py",
-    "Programmers/다리를지나는트럭.py",
-    "Programmers/주식가격.py",
-    "Programmers/기능개발-1.py",
-    "Programmers/같은숫자는싫어.py",
-    "Programmers/순위-1.py",
-    "Programmers/가장먼노드-2.py",
-    "template/sort_merge_sort.py",
-    "template/dijkstra.py",
-    "template/dijk.py",
-    "README.md"
+    "BOJ_SOLVED_AC/9938.py",
+    "BOJ_SOLVED_AC/9663-2.py",
+    "BOJ_SOLVED_AC/9663-1.py",
+    "BOJ_SOLVED_AC/9655.py",
+    "BOJ_SOLVED_AC/9205.py",
+    "BOJ_SOLVED_AC/9095-3.py",
+    "BOJ_SOLVED_AC/9095-2.py",
+    "BOJ_SOLVED_AC/9095-1.py",
+    "BOJ_SOLVED_AC/9093.py",
+    "BOJ_SOLVED_AC/9084-1.py",
+    "BOJ_SOLVED_AC/9012-2.py",
+    "README.md",
+    "template/Categories.md"
   ]
 }
