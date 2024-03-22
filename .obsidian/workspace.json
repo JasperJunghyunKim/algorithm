@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "ALGORITHM.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "template/Categories.md",
+                "file": "ALGORITHM.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "template/Categories.md",
+                "file": "ALGORITHM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "template/Categories.md",
+                "file": "ALGORITHM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "template/Categories.md"
+                "file": "ALGORITHM.md"
               }
             }
           }
@@ -161,6 +161,7 @@
   },
   "active": "00cf065f3604c867",
   "lastOpenFiles": [
+    "template/Categories.md",
     "BOJ_SOLVED_AC/9938.py",
     "BOJ_SOLVED_AC/9663-2.py",
     "BOJ_SOLVED_AC/9663-1.py",
@@ -171,8 +172,6 @@
     "BOJ_SOLVED_AC/9095-1.py",
     "BOJ_SOLVED_AC/9093.py",
     "BOJ_SOLVED_AC/9084-1.py",
-    "BOJ_SOLVED_AC/9012-2.py",
-    "README.md",
-    "template/Categories.md"
+    "ALGORITHM.md"
   ]
 }
