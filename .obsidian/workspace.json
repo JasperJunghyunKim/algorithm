@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "8fb2c4e49d07e952",
+        "id": "8432790a0ff465b9",
         "type": "tabs",
         "children": [
           {
-            "id": "93f2e7bafe8ac60c",
+            "id": "63dc993c028d2fa8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ALGORITHM.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "00cf065f3604c867",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ALGORITHM.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "61dc7d9ece8a7ae2",
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ALGORITHM.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ALGORITHM.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ALGORITHM.md"
+                "file": "README.md"
               }
             }
           }
@@ -159,9 +147,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "00cf065f3604c867",
+  "active": "63dc993c028d2fa8",
   "lastOpenFiles": [
-    "template/Categories.md",
+    "README.md",
+    "README.md",
     "BOJ_SOLVED_AC/9938.py",
     "BOJ_SOLVED_AC/9663-2.py",
     "BOJ_SOLVED_AC/9663-1.py",
@@ -171,7 +160,6 @@
     "BOJ_SOLVED_AC/9095-2.py",
     "BOJ_SOLVED_AC/9095-1.py",
     "BOJ_SOLVED_AC/9093.py",
-    "BOJ_SOLVED_AC/9084-1.py",
-    "ALGORITHM.md"
+    "BOJ_SOLVED_AC/9084-1.py"
   ]
 }
