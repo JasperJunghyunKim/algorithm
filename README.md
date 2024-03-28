@@ -75,9 +75,8 @@ https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 
 
 -----------
-# [[BFS_너비우선탐색]], DFS
-[[DFS_깊이우선탐색]] 
-
+## [[BFS_너비우선탐색]]
+## [[DFS_깊이우선탐색]] 
 ## [[BackTracking_백트래킹]]
 ## [[DP(DynamicProgramming)]]
 

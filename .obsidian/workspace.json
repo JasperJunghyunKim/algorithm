@@ -4,95 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "141f7a7143c5a412",
+        "id": "05c614633eaafc00",
         "type": "tabs",
         "children": [
           {
-            "id": "a1a5c1f5f34b2721",
+            "id": "1b4f3bb5bdfb0767",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_categories/DP(DynamicProgramming).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ce862328a549753d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_categories/BackTracking_백트래킹.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b62d57f3933f62b3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_categories/Greedy_그리디.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "11d5dc46caae726c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6a7337e456cc1063",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_categories/UnionFind.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b3bb41323254071f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_categories/FloodFill.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b6899a612293bfad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_categories/BFS_너비우선탐색.md",
+                "file": "_Categories/그래프1.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -158,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_categories/BFS_너비우선탐색.md",
+                "file": "_Categories/그래프1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_categories/BFS_너비우선탐색.md",
+                "file": "_Categories/그래프1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -198,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_categories/BFS_너비우선탐색.md"
+                "file": "_Categories/그래프1.md"
               }
             }
           }
@@ -219,57 +146,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "floating": {
-    "id": "da9a528e353e7630",
-    "type": "floating",
-    "children": [
-      {
-        "id": "940d3dcf7e36b2a8",
-        "type": "window",
-        "children": [
-          {
-            "id": "4873de27c23955d6",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "2a4843da724dd08b",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "README.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 756,
-        "y": 38,
-        "width": 756,
-        "height": 894,
-        "maximize": false,
-        "zoom": -0.5
-      }
-    ]
-  },
-  "active": "b6899a612293bfad",
+  "active": "1b4f3bb5bdfb0767",
   "lastOpenFiles": [
-    "BOJ_SOLVED_AC/1260-3.py",
-    "_categories/BackTracking_백트래킹.md",
-    "_categories/DFS_깊이우선탐색.md",
-    "_categories/BFS_너비우선탐색.md",
-    "_categories/FloodFill.md",
-    "_categories/ExhaustiveSearch_완전탐색.md",
-    "_categories/DP(DynamicProgramming).md",
-    "_categories/DivideConquer_분할정복.md",
-    "_categories/그래프1.md",
+    "_Categories/그래프1.md",
+    "_Categories/DP(DynamicProgramming).md",
+    "_Categories/BackTracking_백트래킹.md",
+    "_Categories/Greedy_그리디.md",
     "README.md",
-    "_categories/UnionFind.md",
-    "_categories/Greedy_그리디.md",
+    "_Categories/UnionFind.md",
+    "_Categories/FloodFill.md",
+    "_Categories/ExhaustiveSearch_완전탐색.md",
+    "Kruskal_크루스칼.md",
+    "_Categories/_Template.md",
+    "_Categories/FloydWarshall_플로이드워셜.md",
+    "_Categories/Dijkstra_다익스트라.md",
+    "_Categories/DFS_깊이우선탐색.md",
+    "_Categories/BFS_너비우선탐색.md",
+    "BOJ_SOLVED_AC/1238-1.py",
+    "_Categories/DivideConquer_분할정복.md",
+    "BOJ_SOLVED_AC/1260-3.py",
     "BOJ_SOLVED_AC/2580-1.py",
     "BOJ_SOLVED_AC/1759-1.py",
     "BOJ_SOLVED_AC/15649-3.py",
@@ -279,8 +174,6 @@
     "BOJ_SOLVED_AC/4195-2.py",
     "BOJ_SOLVED_AC/4195-1.py",
     "BOJ_SOLVED_AC/1717-2.py",
-    "BOJ_SOLVED_AC/1717-2.ㅔㅛ",
-    "BOJ_SOLVED_AC/1717-1.py",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
