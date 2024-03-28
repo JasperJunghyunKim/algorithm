@@ -1,22 +1,29 @@
-def is_valid_position(row):
-    for i in range(row):
-        # 같은 열 또는 대각선 상에 다른 퀸이 있는지 확인
-        if board[row] == board[i] or abs(board[row] - board[i]) == row - i:
+#
+# 24-03-28
+# 
+N = int(input())
+
+# IDXth Row saves col number
+row = [0] * (N + 1)
+answer = [0]
+
+def is_promising(nxt_row, nxt_col):
+    for prev_row in range(1, nxt_row):
+        if row[prev_row] == nxt_col or abs(nxt_col - row[prev_row]) == nxt_row - prev_row:
             return False
     return True
 
-def dfs(row):
-    global count
-    if row == N:  # 모든 행에 퀸을 놓았다면, 하나의 해를 찾음
-        count += 1
+def recursive(cur_row):
+    if cur_row == N:
+        answer[0] += 1
         return
-    for col in range(N):
-        board[row] = col  # 현재 행에 퀸을 놓음
-        if is_valid_position(row):  # 유효한 위치인지 확인
-            dfs(row + 1)  # 다음 행으로 이동
+    for nxt_col in range(1, N + 1):
+        if is_promising(cur_row + 1, nxt_col):
+            row[cur_row + 1] = nxt_col
+            recursive(cur_row + 1)
+            row[cur_row + 1] = 0
 
-N = int(input())
-board = [0] * N  # 각 행의 퀸이 놓인 열의 위치
-count = 0
-dfs(0)  # 0번째 행부터 시작
-print(count)
+recursive(0)
+
+
+print(answer[0])

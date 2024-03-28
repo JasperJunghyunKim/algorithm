@@ -1,4 +1,6 @@
 
+
+
 https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 
 
@@ -7,17 +9,17 @@ https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 [한 장으로 보는 알고리즘 공부 순서](https://velog.io/@ngngs/%ED%95%9C-%EC%9E%A5%EC%9C%BC%EB%A1%9C-%EB%B3%B4%EB%8A%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 
-### 복잡도 계산
-[코드의 시간 복잡도 계산하기 MEDIUM](https://medium.com/humanscape-tech/%EC%BD%94%EB%93%9C%EC%9D%98-%EC%8B%9C%EA%B0%84-%EB%B3%B5%EC%9E%A1%EB%8F%84-%EA%B3%84%EC%82%B0%ED%95%98%EA%B8%B0-b67dd8625966)
-[빅오 표기법을 설명하다 - 시간과 공간의 복잡도](https://www.freecodecamp.org/korean/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/)
-[Complexity Cheat Sheet](https://www.bigocheatsheet.com/)
-[Practice Questions](https://www.geeksforgeeks.org/practice-questions-time-complexity-analysis/)
+# 복잡도 계산
+* [코드의 시간 복잡도 계산하기 MEDIUM](https://medium.com/humanscape-tech/%EC%BD%94%EB%93%9C%EC%9D%98-%EC%8B%9C%EA%B0%84-%EB%B3%B5%EC%9E%A1%EB%8F%84-%EA%B3%84%EC%82%B0%ED%95%98%EA%B8%B0-b67dd8625966)
+* [빅오 표기법을 설명하다 - 시간과 공간의 복잡도](https://www.freecodecamp.org/korean/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/)
+* [Complexity Cheat Sheet](https://www.bigocheatsheet.com/)
+* [Practice Questions](https://www.geeksforgeeks.org/practice-questions-time-complexity-analysis/)
 
 1. 시간복잡도
 2. 공강복잡도
 	- 메모리 사용량 계산
 
-### Python 자료 구조
+# Python 자료 구조
 1. List
 2. Set
 3. 해시테이블 Dict
@@ -26,50 +28,85 @@ https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 6. Tree
 7. 
 
-### 유형
+# 유형
 1. DP
-2. BFS, DFS
-3. 백트래킹
-4.  완전탐색 (Exhaustive Search)
+2. 그래프 이론
+	- 인접
+1. BFS, DFS
+2. 백트래킹
+3.  완전탐색 (Exhaustive Search)
 	* Brute Force
 	* 비트마스크
 	* 재귀함수를 이용한 백트래킹
 	* 순열을 이용해서 모든 경우를 중복 없이 다 해보는 방법
 	* BFS / DFS
 	* Meet In the Middle (BOJ 1208, 7453, 1450)
-5. 그래프 이론
+4. 그래프 이론
 	- 인접 행렬, 인접 리스트, 간선 리스트
-6. 그래프 이론 2
+5. 그래프 이론 2
 	- 다익스트라, 플로이드워셜, 벨만포드
 	- 최소 신장 스패닝 트리(MST), 크루스칼
+	- 이분그래프(Bipartite Graph)
+		- BFS
+		- 이분그래프 찾는 방법
+		- 연결 그래프인지, 비연결 그래프인지 구분
+	- [순환 그래프](https://jackpot53.tistory.com/92)
+	- 
 1. 그리디 알고리즘
-3. 순열, 조합, 중복순열, 중복조합
-4. 문자열
-5. 분할정복
+2. 순열, 조합, 중복순열, 중복조합
+3. 문자열
+4. 분할정복
 	- 이분탐색, 머지 소트, 퀵 소트
-6. 이분탐색
-7. Union Find
-8. Flood Fill
-9. 정렬
-10. 트리
+5. 이분탐색
+6. Union Find, Disjoint Set
+7. Flood Fill
+8. 정렬
+9. 트리
 	- 순회 종류 : Pre, In, Post)
 	- 트리 지름 계산
-11. 진법변환
-12. Disjoint Set
-13. Heap, Priority Queue
-14. 문자열 알고리즘
-15. 수학
+10. 진법변환
+11. Heap, Priority Queue
+12. 문자열 알고리즘
+	- KMP
+13. 수학
 	- 소수, 최소공배수, 최대공약수, 소인수분해, 팩토리얼
-16. 구간 최소값
+14. 구간 최소값
+	- 슬라이딩 윈도우 알고리즘, 세그먼트 트리, DP, 루트 N 으로 나누기, 2차원 배열에 저장하는 방법, 다 해보는 방법
 
+
+-----------
+# BFS, DF
+# Back Tracking
+###### 원리
+* 재귀함수를 이용한 DFS
+###### 구현 방법
+###### 유형
+- N 과 M 순열
+- N Queen
+- 
+
+-----
 
 # DP
-- dp 점화식이 의미하는 정의를 먼저 정할 것
-	- 예) dp\[i\] 는 
-- 점화식은 2차원 행렬이 될 수도 있다 (여러 조건이 추가되면)
-	- 예) 0-1 Knapsack 문제처럼
-- 연산 최소값을 구하시오
-- Knapsack Problem
+##### A. 원리
+- 문제를 나누고, 그 문제의 결과 값을 재활용하여 전체 답을 구함
+- 동일한 작은 문제들이 반복하여 나타나는 경우에 사용 가능
+- 부분 문제의 최적 결과값이 전체 문제의 최적 결과를 낼 수 있는 경우 사용 가능
+##### B. 접근, 구현 방법
+1. 점화식 만들기
+	* 점화식(일반적으로 DP 배열)의 의미부터 정리
+	* 예) i 번째까지 실행했을 때의 최적해
+2. Bottom Up (Tabulation)
+	- 직관적으로 접근 가능 (선형적으로 해결하므로)
+	- 반복적으로 부분 문제를 해결하고, 결과를 배열 등에 저장
+3. Top Down (Recursive) + Memoization
+4. Memoization
+##### C. 유형
+- 피보나치 수
+- 0-1 Knapsack Problem
+- 최장증가부분수열
+- N x M 배열 간 영향을 주는 점화식
+##### D. 정리필요
 - 구현 방법 Bottom Up, Top Down 비교
 	- 둘 다 점화식은 동일
 	- 구현 방법에 있어선 Bottom Up 방식이 비교적 직관적으로 접근 가능 -> Linear 하게 해결하므로
@@ -89,18 +126,142 @@ https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 	4. **서브 문제의 재사용**: Top-down 방식은 필요한 서브 문제만을 정확히 해결하여 메모이제이션합니다. 반면, Bottom-up 방식은 모든 서브 문제를 처음부터 차례대로 해결합니다. 따라서, 특정 조건에서는 Top-down 방식이 더 적은 수의 서브 문제를 해결함으로써 성능 이점을 가질 수 있습니다.
 	
 	결론적으로, Top-down과 Bottom-up 방식 모두 동일한 문제를 해결하기 위해 동일한 수의 서브 문제를 해결하지만, 함수 호출 오버헤드, 메모리 접근 패턴, 스택 오버플로의 위험 등의 차이로 인해 실제 실행 시간에서 차이가 발생할 수 있습니다. 일반적으로 Bottom-up 방식이 더 효율적이라고 평가되는 경우가 많으나, 실제 성능은 문제의 성격, 구현 방법, 사용 환경에 따라 달라질 수 있습니다. 따라서, 어떤 방식이 더 나은지를 판단하기 위해서는 직접 구현해보고 성능을 비교하는 것이 좋습니다.
-* 
 
 
-### 그리디 알고리즘
+
+
+
+
+---
+
+
+---
+# 그래프 이론 1
+##### A. 원리
+##### B. 접근, 구현 방법
+* [그래프 저장 방법](https://velog.io/@eunchae2000/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EA%B7%B8%EB%9E%98%ED%94%84%EB%A5%BC-%EC%A0%80%EC%9E%A5%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-3%EA%B0%80%EC%A7%80-%EC%9D%B8%EC%A0%91-%ED%96%89%EB%A0%AC-%EC%9D%B8%EC%A0%91-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EA%B0%84%EC%84%A0-%EB%A6%AC%EC%8A%A4%ED%8A%B8-with-Python)
+* 인접 행렬
+* 인접 리스트
+* 간선 리스트
+* 가중치 유무
+* 방향성 유무
+##### C. 비교
+##### D. 유형
+- BFS
+- DFS
+- 다익스트라(Dijkstra)
+- 크루스칼(Kruskal)
+- 플로이드 워셜
+- 벨만 포드
+- 위상정렬
+
+
+---
+# 그리디 알고리즘
 * 그리디 적용 가능성 확인
 	1. 분할 가능
 	2. 지역 최적해가 전역 최적해를 보장
-1
 
-백 트래킹
 
-### 조합, 순열, 중복 순열, 중복 조합
+
+
+---
+# Union Find
+##### A. 원리
+##### B. 접근, 구현 방법
+* 기본 구현 방법
+* path compression, subtree depth comparison
+* [방청소](https://www.acmicpc.net/problem/9938) 문제와 같이, 경우에 따라 capacity 와 size 를 저장해주는 경우도 있음 
+``` Python
+# find - 기본
+def find(n):
+	if root[n] == n:
+		return n
+	return find(root[n])
+
+# union - 기본
+def union(a, b):
+	root_a = find(a)
+	root_b = find(b)
+	root[root_b] = root_a
+```
+
+```python
+# find - path compression
+def find(n):
+	if root[n] == n:
+		return n
+	root[n] = find(root[n])
+	return root[n]
+
+# union - subtree's depth comparison
+# append shorter subtree to another one
+def union(a, b)
+	root_a = find(a)
+	root_b = find(b)
+	if root_a == root_b:
+		return
+	if depth[root_a] > depth[root_b]:
+		root[root_b] = root_a
+	elif depth[root_a] < depth[root_b]:
+		root[root_a] = root_b
+	else:
+		root[root_b] = root_a
+		depth[root_a] += 1
+```
+
+##### C. 유형
+* [방청소](https://www.acmicpc.net/problem/9938)
+##### D. 정리중
+Disjoint Set과 Union Find 알고리즘은 서로 밀접하게 연관된 개념입니다. 이들은 집합을 효율적으로 관리하고, 두 원소가 같은 집합에 속하는지 빠르게 판별하기 위해 사용됩니다. 이 개념들은 주로 네트워크 연결, 최소 신장 트리, 그래프의 사이클 검사 등과 같은 그래프 이론에서 활용됩니다.
+
+### Disjoint Set (분리 집합)
+
+Disjoint Set은 여러 개의 원소가 주어졌을 때, 이들을 서로 겹치지 않는 부분 집합들로 나누고, 각 집합의 정보를 관리하는 자료구조입니다. 이 자료구조는 각 집합을 대표하는 '대표 원소(representative)' 또는 '루트(root)'를 사용해 각 집합을 구별합니다.
+
+### Union Find 알고리즘
+
+Union Find 알고리즘은 Disjoint Set을 구현하는 알고리즘으로, 주로 두 가지 주요 연산을 제공합니다:
+
+1. **Union**: 두 원소가 속한 집합을 합치는 연산입니다. 두 원소가 이미 같은 집합에 속해 있으면 아무 것도 하지 않고, 그렇지 않은 경우 두 집합을 하나로 합칩니다.
+
+2. **Find**: 주어진 원소가 속한 집합의 대표 원소(루트)를 찾는 연산입니다. 이 연산은 주어진 두 원소가 같은 집합에 속해 있는지 여부를 판별하는 데에도 사용됩니다.
+
+### 관계
+
+- **Disjoint Set은 개념**입니다. 여러 원소가 겹치지 않는 부분 집합으로 구분되어 있을 때, 각 집합의 정보를 효율적으로 관리하는 자료구조의 개념을 의미합니다.
+
+- **Union Find는 Disjoint Set을 구현하는 알고리즘**입니다. Union과 Find 연산을 통해 Disjoint Set의 각 집합을 관리하고, 원소 간의 관계를 효율적으로 파악할 수 있게 해 줍니다.
+
+Union Find 알고리즘의 효율성을 높이기 위해 사용되는 기법으로는 **경로 압축(Path Compression)**과 **랭크(Rank) 기반의 합치기(Union by Rank)**가 있습니다. 경로 압축은 Find 연산을 실행하면서 만나는 모든 노드가 직접 루트를 가리키도록 함으로써 Find 연산의 속도를 개선합니다. 랭크 기반 합치기는 두 트리를 합칠 때 높이(랭크)가 더 낮은 트리를 높이가 더 높은 트리 아래에 붙이는 방식으로, 트리의 높이 증가를 최소화합니다. 이러한 최적화 기법들은 Union Find 알고리즘의 성능을 크게 향상시킵니다.
+
+
+
+# Divide Conquer
+###### 원리
+* 
+###### 접근 방법 / 구현 방법
+1. Divide
+	- 하위 문제로 분할 가능할 때까지 나눔
+2. Conquer
+	- 하위 문제를 재귀적으로 해결
+	- 나눌 수 없는 단위가 되면, 탈출 조건을 설정하고 문제를 해결
+3. Combine
+
+###### 구현 비교
+
+###### 유형
+
+###### 정리중
+
+1. 구현 비교
+2. 유형
+	* Quick Sort, Merge Sort, Binary Search
+3. 정리중
+
+
+
+# 조합, 순열, 중복 순열, 중복 조합
 
 
 
@@ -109,14 +270,8 @@ https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 	- 여행경로
 	- N Queen
 	- N 과 M
-* dict keys
-* dict items
-* dict values>
-* 집합 ... iter 종류 재확인
-* https://medium.com/@chullino/if-name-main-%EC%9D%80-%EC%99%9C-%ED%95%84%EC%9A%94%ED%95%A0%EA%B9%8C-bc48cba7f720
-* DP 시, bottom up, top down 적합 조건
+
 * combination, permutation
-* list.count
 
 
 - 전역 참조가 불가하면 list[0] 인덱스를 사용하는 방법
@@ -136,93 +291,46 @@ https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 
 
 ###### 23-03-18
-* N QUEEN - 
 * 
 
 ###### 문제
 - [BOJ 14500](https://www.acmicpc.net/problem/14500)
 	- DFS 재귀 전후 visited check 조건
-- [BOK]()
-- 
 
 
 ###### 23-03-16
 * 참조형 vs (?) / 그리고 전역 범위
-* swap 한번에
-* combination, perm
+
 * max(2D graph)
-* BFS, DFS 꼴 복습
-* 'meetings.sort(key=lambda x: (x[1], x[0]))'
-* 
-
-###### 23-03-15
-- BFS, DFS
-- Divide Conquer
-- 자료구조 불변
-
-## 자료구조
-- 스택
-- 덱
-- 
 
 
-## DP
-- 재귀 (top down)
-- 메모이제이션 점화식 (bottom up)
-- 
-
-## 사용법
-- 각 컬렉션 ... 등의 추가, 제거 방법
 
 
-## 코드
 
-```python
-
-import sys
-input = sys.stdin.readline
-
-n = int(input())
-
+# Python 구현
+1. 배열 Deep Copy, slicing
+``` Python
+a = [1,2,3]
+b = a[::]
 ```
-
-
-### 익힐것
-* 슬라이싱
-* 키 밸류 같이 출력하는 거
-* sys.stdin.readline / input 차이
-* sys.stdout.write / print 차이
-* strip
-* append 시 메모리 재할당이 발생하므로 메모리를 효율적으로 사용하지 못함
-* enumerate
-
-
-## 참고사항
-* visited 체크를 꼭 is in 으로 확인하지 말고, index + boolean 적용해서 시간 단축
-
-
-```python
-
-a = [1,2,3,4,5]
-b = a
-c = a[::]
-
-print(id(a))
-print(id(b))
-print(id(c))
-
-b.append(6)
-print(b)
-print(a)
-
-  
-
-c.append(7)
-print(c)
-print(a)
-
+2. list append 시 메모리 재할당 발생
+		https://atelier-house.tistory.com/3
+1. sys.stdin.readline / input 차이
+2. sys.stdout.write / print 차이
+3. tuple 로 구성된 list 정렬
+	- 정렬 기준 : tuple 의 두 번째 원소 → 첫 번째 원소 순서
+``` python
+list().sort(key = lambda x : (x[1], x[0]))
 ```
-
-
-### 수학
-* itertools - combinations, permutations
+6. dict keys, dict values, dict items
+7. swap
+``` python
+a = 10, b = 20
+a, b = b, a
+print(a, b) # 20, 10
+```
+8. sort vs sorted
+9. itertools - combinations, permutations
+10. visited 구현
+	* x is in list() 대신, boolean list 로 구현
+11. enumerate
