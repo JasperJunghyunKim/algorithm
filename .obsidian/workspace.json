@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "7fed176f703c07a1",
+        "id": "26dbee0cc95d2371",
         "type": "tabs",
         "children": [
           {
-            "id": "34ad7624c5692c42",
+            "id": "7c7d7cabc593c7e3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_Categories/Dijkstra.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_Categories/Dijkstra.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_Categories/Dijkstra.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "_Categories/Dijkstra.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,29 +138,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "34ad7624c5692c42",
+  "active": "7c7d7cabc593c7e3",
   "lastOpenFiles": [
+    "_Categories/Floyd-Warshall.md",
+    "_Categories/Dijkstra.md",
+    "BOJ_SOLVED_AC/11404-1.py",
+    "_Categories/UnionFind.md",
+    "_Categories/BellmanFord.md",
+    "Screenshot 2024-03-29 at 12.40.31 PM.png",
+    "README.md",
+    "BOJ_SOLVED_AC/1753-1.py",
     "BOJ_SOLVED_AC/1753-3.py",
     "BOJ_SOLVED_AC/1753-2.py",
     "_Categories/_Template.md",
-    "_Categories/Dijkstra.md",
     "_Categories/DivideConquer.md",
     "_DataStructures/PriorityQueue.md",
     "_DataStructures/Heap.md",
     "_DataStructures",
-    "Untitled.md",
     "_Categories/Graph1.md",
     "_Categories/Kruskal.md",
-    "_Categories/UnionFind.md",
     "_Categories/Greedy.md",
-    "_Categories/FloydWarshall.md",
     "_Categories/DP.md",
     "_Categories/ExhaustiveSearch.md",
     "_Categories/BackTracking.md",
     "_Categories/DFS.md",
     "_Categories/BFS.md",
-    "README.md",
-    "BOJ_SOLVED_AC/1753-1.py",
     "_Categories/FloodFill.md",
     "BOJ_SOLVED_AC/1238-1.py",
     "BOJ_SOLVED_AC/1260-3.py",
@@ -176,8 +170,6 @@
     "BOJ_SOLVED_AC/1759-1.py",
     "BOJ_SOLVED_AC/15649-3.py",
     "().md",
-    "BOJ_SOLVED_AC/9938-2.py",
-    "BOJ_SOLVED_AC/9938-1.py",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
