@@ -86,7 +86,11 @@ def dijkstra(start_node, num_nodes):
 		* 인접 리스트를 Reverse 로 생성하고(from, to 를 바꿈), '특정 노드' 를 출발점으로 다익스트라를 1회만 실행해도 나머지 노드까지의 최단경로를 알 수 있음
 	* [BOJ파티](https://www.acmicpc.net/problem/1238)
 	* [블로그 참조](https://chb2005.tistory.com/128)
-
+2. 1차원 ~ 3차원 행렬
+	1. 1차원  : Node 1 → N 으로 이동의 최단거리
+	2. 2차원 : N X M 행렬 상에서 (1, 1) → (N, M) 으로 이동의 최단거리
+	3. 3차원 : 실제 3차원 행렬 상에서 이동 혹은 방향성을 고려한 응용 문제 ([로봇](https://www.acmicpc.net/problem/1726))
+ 
 ### ⚠️ 주의
 
 1. Queue 를 이용한 선형탐색 구현
