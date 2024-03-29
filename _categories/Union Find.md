@@ -1,8 +1,8 @@
-
 ### Disjoint Set (분리 집합 ) 개념
 
 * 여러 개의 원소가 주어졌을 때, 이들을 서로 겹치지 않는 부분 집합들로 나누고, 각 집합의 정보를 관리하는 자료구조
 * 이 자료구조는 각 집합을 대표하는 '대표 원소(representative)' 또는 '루트(root)'를 사용해 각 집합을 구별함
+
 
 ---
 ### Union Find 개념
@@ -14,6 +14,7 @@
 	2. union
 	3. find
 * 즉, 본 알고리즘은 원소 간의 관계(특히 서로소 관계)를 파악할 수 있게 해줌
+
 
 ---
 ### 구현_기본
@@ -42,6 +43,7 @@ def union(x, y):
 	root_y = find(y)
 	root[root_y] = root_x
 ```
+
 
 ---
 ### 구현_최적화(Path Compression, Union By Rank)
@@ -74,10 +76,13 @@ def union(a, b)
 		depth[root_a] += 1
 ```
 
+
 ---
 ### 유형
 1. 두 집합이 합쳐지면서 capacity 가 늘어나고, 해당 집합에 포함되는 대상의 개수(size)가 capacity 를 초과하지 않는지를 확인하는 문제
 	- [방청소](https://www.acmicpc.net/problem/9938)
+2. [wip Kruskal](wip%20Kruskal.md) MST 알고리즘
+
 
 ---
 ### ⚠️ 주의

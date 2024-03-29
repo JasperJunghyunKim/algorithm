@@ -10,3 +10,6 @@
 - N Queen
 - 스토쿠
 - 테트로미노
+
+
+이들은 주로 결정 문제(decision problem), 최적화 문제(optimization problem), 계산 문제(enumeration problem) 등을 해결하는 데 사용됩니다.

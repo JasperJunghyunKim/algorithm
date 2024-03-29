@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "26dbee0cc95d2371",
+        "id": "1831b47e5c6c9bf3",
         "type": "tabs",
         "children": [
           {
-            "id": "7c7d7cabc593c7e3",
+            "id": "cd8c8bae15f04818",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_Categories/Dijkstra.md",
+                "file": "_Categories/wip DP.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_Categories/Dijkstra.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +101,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_Categories/Dijkstra.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_Categories/Dijkstra.md"
+                "file": "완전이진트리.md"
               }
             }
           }
@@ -146,37 +144,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7c7d7cabc593c7e3",
+  "active": "5dd477f5b799f765",
   "lastOpenFiles": [
+    "_Categories/wip DP.md",
+    "완전이진트리.md",
     "_Categories/Union Find.md",
+    "_Categories/Floyd-Warshall.md",
+    "_Categories/wip FloodFill.md",
     "_Categories/Dijkstra.md",
-    "_Categories/_Template.md",
+    "_Categories/DFS.md",
     "_Categories/BFS.md",
+    "_Categories/wip BackTracking.md",
+    "_Categories/wip Graph.md",
+    "_Categories/_Template.md",
+    "_Categories/wip ExhaustiveSearch.md",
     "README.md",
-    "_Categories/BackTracking.md",
+    "_Categories/wip Greedy.md",
+    "_Categories/wip BellmanFord.md",
+    "_Categories/wip DivideConquer.md",
+    "_Categories/wip Kruskal.md",
+    "BOJ_SOLVED_AC/1389-1.py",
     "BOJ_SOLVED_AC/1726-1.py",
     "BOJ_SOLVED_AC/10217-1.py",
     "BOJ_SOLVED_AC/1504-1.py",
     "BOJ_SOLVED_AC/10473-1.py",
-    "_Categories/Floyd-Warshall.md",
     "BOJ_SOLVED_AC/4485-1.py",
     "BOJ_SOLVED_AC/11404-1.py",
-    "_Categories/BellmanFord.md",
     "Screenshot 2024-03-29 at 12.40.31 PM.png",
     "BOJ_SOLVED_AC/1753-1.py",
     "BOJ_SOLVED_AC/1753-3.py",
     "BOJ_SOLVED_AC/1753-2.py",
-    "_Categories/DivideConquer.md",
     "_DataStructures/PriorityQueue.md",
     "_DataStructures/Heap.md",
-    "_DataStructures",
-    "_Categories/Graph1.md",
-    "_Categories/Kruskal.md",
-    "_Categories/Greedy.md",
-    "_Categories/DP.md",
-    "_Categories/ExhaustiveSearch.md",
-    "_Categories/DFS.md",
-    "_Categories/FloodFill.md",
     "().md",
     "Untitled.canvas",
     "Untitled 2.canvas",
