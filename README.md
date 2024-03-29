@@ -17,7 +17,8 @@ https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 
 1. 시간복잡도
 2. 공강복잡도
-	- 메모리 사용량 계산
+	- 메모리 사용량 계산 https://zoosso.tistory.com/995
+
 
 # Python 자료 구조
 1. List
@@ -75,10 +76,10 @@ https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 
 
 -----------
-## [[BFS_너비우선탐색]]
-## [[DFS_깊이우선탐색]] 
-## [[BackTracking_백트래킹]]
-## [[DP(DynamicProgramming)]]
+## [[BFS]]
+## [[DFS]] 
+## [[BackTracking]]
+## [[DP]]
 
 
 
