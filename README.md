@@ -112,10 +112,10 @@ https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 
 1. Deep Copy + Slicing
 	
-``` Python
-a = [1,2,3]
-b = a[::]
-```
+	``` Python
+	a = [1,2,3]
+	b = a[::]
+	```
 
 
 2. Visited Check 성능 비교
@@ -126,11 +126,11 @@ b = a[::]
 	* 그러나 딕셔너리는 내부적으로 #해시테이블 을 사용하므로, 키 존재 여부를 평균 O(1) 으로 확인 가능
 	* 반면, 리스트는 각 원소를 처음부터 순차적으로 비교하므로, 최악의 경우 O(n) 소요
 ``` Python
-visited_a = [(1,2), (2,3), (3,4)] 
-print((1,2) in a)
+	visited_a = [(1,2), (2,3), (3,4)] 
+	print((1,2) in a)
 
-visited_b = {(1,2): True, (2,3): True, (3,4): True}
-print((1,2) in b)
+	visited_b = {(1,2): True, (2,3): True, (3,4): True}
+	print((1,2) in b)
 ```
 
 
