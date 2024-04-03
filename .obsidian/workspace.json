@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "1831b47e5c6c9bf3",
+        "id": "02f8bcce21742456",
         "type": "tabs",
         "children": [
           {
-            "id": "cd8c8bae15f04818",
+            "id": "4d2df2dbcd77fb86",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_Categories/wip DP.md",
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cb90086e72787a13",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_Categories/DFS.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,6 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,6 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "완전이진트리.md"
+                "file": "README.md"
               }
             }
           }
@@ -144,36 +158,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5dd477f5b799f765",
+  "active": "4d2df2dbcd77fb86",
   "lastOpenFiles": [
-    "_Categories/wip DP.md",
-    "완전이진트리.md",
-    "_Categories/Union Find.md",
-    "_Categories/Floyd-Warshall.md",
-    "_Categories/wip FloodFill.md",
-    "_Categories/Dijkstra.md",
-    "_Categories/DFS.md",
     "_Categories/BFS.md",
-    "_Categories/wip BackTracking.md",
-    "_Categories/wip Graph.md",
-    "_Categories/_Template.md",
-    "_Categories/wip ExhaustiveSearch.md",
     "README.md",
-    "_Categories/wip Greedy.md",
-    "_Categories/wip BellmanFord.md",
+    "_Categories/DFS.md",
+    "_Categories/Dijkstra.md",
+    "_Categories/Floyd-Warshall.md",
+    "_Categories/BackTracking.md",
+    "23288-1.py",
+    "23289-1.py",
+    "23290-1.py",
+    "23291-1.py",
+    "_Categories/Union Find.md",
+    "_Categories/DP.md",
     "_Categories/wip DivideConquer.md",
+    "_Categories/wip Greedy.md",
     "_Categories/wip Kruskal.md",
+    "_Categories/wip Graph.md",
+    "_Categories/wip FloodFill.md",
+    "_Categories/wip ExhaustiveSearch.md",
+    "_Categories/_Template.md",
+    "BOJ_SOLVED_AC/12100-1.py",
+    "BOJ_SOLVED_AC/13460-1.py",
+    "BOJ_SOLVED_AC/14500-5.py",
+    "완전이진트리.md",
+    "doodle.py",
+    "_Categories/wip BellmanFord.md",
     "BOJ_SOLVED_AC/1389-1.py",
     "BOJ_SOLVED_AC/1726-1.py",
-    "BOJ_SOLVED_AC/10217-1.py",
-    "BOJ_SOLVED_AC/1504-1.py",
-    "BOJ_SOLVED_AC/10473-1.py",
-    "BOJ_SOLVED_AC/4485-1.py",
-    "BOJ_SOLVED_AC/11404-1.py",
     "Screenshot 2024-03-29 at 12.40.31 PM.png",
-    "BOJ_SOLVED_AC/1753-1.py",
-    "BOJ_SOLVED_AC/1753-3.py",
-    "BOJ_SOLVED_AC/1753-2.py",
     "_DataStructures/PriorityQueue.md",
     "_DataStructures/Heap.md",
     "().md",

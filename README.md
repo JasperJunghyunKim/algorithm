@@ -76,10 +76,7 @@ https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 
 
 -----------
-## [[BFS]]
-## [[DFS]] 
-## [[wip BackTracking]]
-## [[wip DP]]
+
 
 
 
@@ -111,14 +108,58 @@ https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 
 
 
-# Python 구현
-1. 배열 Deep Copy, slicing
+# Python 구현 팁
+
+1. Deep Copy + Slicing
+	
 ``` Python
 a = [1,2,3]
 b = a[::]
 ```
-2. list append 시 메모리 재할당 발생
+
+
+2. Visited Check 성능 비교
+	
+	* BFS, DFS, FloodFill, BackTracking 등에서 사용되는 Visited 사용 방법
+	* 리스트, 딕셔너리를 활용한 특정 좌표의 visited 여부 체크 방법
+	* 아래 두 코드는 모두 동일하게 특정 튜플 (1,2) 의 방문 여부룰 체크함
+	* 그러나 딕셔너리는 내부적으로 #해시테이블 을 사용하므로, 키 존재 여부를 평균 O(1) 으로 확인 가능
+	* 반면, 리스트는 각 원소를 처음부터 순차적으로 비교하므로, 최악의 경우 O(n) 소요
+``` Python
+visited_a = [(1,2), (2,3), (3,4)] 
+print((1,2) in a)
+
+visited_b = {(1,2): True, (2,3): True, (3,4): True}
+print((1,2) in b)
+```
+
+
+3. 전역 변수 사용
+	
+	**기본 자료형 (Prinimtive Type)**
+	- 기본 자료형은 전역적으로 사용할 수 없음
+	- 따라서 특정 함수 내부에서 변수에 접근(조회, 수정)하기 위해선 해당 변수를 전역 #global 선언 하거나, 
+	- \[Cheat\] 값 자체를 길이 1 인 리스트 (a = \[0\]) 로 선언하여 전역 처럼 접근하는 방법이 있음
+	
+	**참조형 자료형(Reference Type)**
+	* deque, list, dict 등은 기본적으로 전역 변수로 선언된 인스턴스를 참조함
+	* 따라서 함수 내부에서 사용할 때, #global 키워드 없이도 인스턴스에 접근이 가능함 (조회, 수정 가능)
+	* \[중요\] 그러나 새로운 객체를 할당하는 것은 변수를 직접 수정하는 것과 같으므로, 이 경우엔 #global 키워드를 사용해 전역 변수로 명시해야 함
+		``` Python
+		my_list = [1, 2, 3] 
+		def update_list(): 
+			my_list.append(4) # 전역 변수의 내용을 변경 
+		def replace_list(): 
+			global my_list 
+			my_list = [4, 5, 6] # 전역 변수에 새로운 객체를 할당
+		```
+
+
+	
+
+5. list append 시 메모리 재할당 발생
 		https://atelier-house.tistory.com/3
+
 1. sys.stdin.readline / input 차이
 2. sys.stdout.write / print 차이
 3. tuple 로 구성된 list 정렬
@@ -138,3 +179,4 @@ print(a, b) # 20, 10
 10. visited 구현
 	* x is in list() 대신, boolean list 로 구현
 11. enumerate
+12. 
