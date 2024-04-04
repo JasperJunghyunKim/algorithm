@@ -188,17 +188,42 @@ https://garden1500.tistory.com/8
 
 6. Dict 활용
 
+	**추가**
+	```python
+	a = {1:[1], 2:[2,3]}
+	a[3] = [3,4,5]
+	```
+
+
+	**조회**
+	* Key 에 직접 접근하거나, get 메서드를 사용할 수 있음
+	* 단, Key 에 직접 접근할 경우, 해당 Key 가 없으면 #KeyError 발생
+	* get 메서드를 사용하는 경우, Key 가 없을 경우 None 반환하므로 안전
+	``` Python
+	print(a[2]) # [2,3]
+
+	print(a.get(5)) # None
+	```
+
+	**삭제**
 	- 삭제하기 위해선 POP 또는 DEL 메서드를 사용할 수 있음
 	  POP 은 제거되는 Key 의 Value 를 반환하며, DEL 은 그냥 제거함
-	  - 뭐지 indent 
+	* Key 가 없을 경우, 둘 다 #KeyError 발생
+	  단, POP 의 경우 Key 가 없을 경우 Default 값을 지정 가능
 	``` Python
-	a = {1:[1], 2:[2,3]}
-
-	# 추가
-	a[3] = [3,4,5]
-	# 제거 POP
+	del d[1]
 	
-	# 제거 DEL
+	d.pop(100, None)
+	```
+
+7. range(N) iterable 역순 출력
+
+	```python
+	N = 10
+	a = [i for i in range(N)]
+	
+	# [9,8,7,6,5,4,3,2,1,0]
+	b = [i for i in range(N-1, -1, -1)]
 	```
 
 8. list append 시 메모리 재할당 발생
@@ -211,8 +236,6 @@ https://garden1500.tistory.com/8
 ``` python
 list().sort(key = lambda x : (x[1], x[0]))
 ```
-6. dict keys, dict values, dict items
-7. swap
 
 
 8. sort vs sorted
@@ -220,9 +243,3 @@ list().sort(key = lambda x : (x[1], x[0]))
 10. visited 구현
 	* x is in list() 대신, boolean list 로 구현
 11. enumerate
-
-
-
-12. dict 딥카피
-13. list 생성 generations 시 if 문
-14. range 거꾸로 range(SIZE-1, -1, -1)

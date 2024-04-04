@@ -1,9 +1,6 @@
-list_a = [0,1,2,3,4,5,6,7,8,9]
+N = 10
+a = [i for i in range(N)]
 
-# [0,2,4,6,8]
-list_b = [i for i in list_a if i % 2 == 0]
-# [-1,1,-1,3,-1,5,-1,7,-1,9]
-list_c = [i if i % 2 else -1 for i in list_a]
-
-print(list_b)
-print(list_c)
+# [9,8,7,6,5,4,3,2,1,0]
+b = [i for i in range(N-1, -1, -1)]
+print(a, b)
