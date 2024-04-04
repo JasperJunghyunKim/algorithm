@@ -71,23 +71,6 @@ https://garden1500.tistory.com/8
 -----------
 
 
-
-
-
-
-# 조합, 순열, 중복 순열, 중복 조합
-
-
-
-
-
-
-
-
-
-
-
-
 # Python 구현 팁
 
 1. Deep Copy + Slicing
@@ -239,22 +222,159 @@ https://garden1500.tistory.com/8
 	print(math.floor(1.9)) # 1
 	```
 
+9. list - item 추가 시 속도, 메모리 비교
+	
+	* 참고
+		* [파이썬 메모리 관리 방법](https://yomangstartup.tistory.com/105)
+		* [파이썬 속도 개선](https://atelier-house.tistory.com/3)
+		* [파이썬 메모리 할당, 해제, 재할당](https://velog.io/@yun9yu/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EB%A9%94%EB%AA%A8%EB%A6%AC-%ED%95%A0%EB%8B%B9)
+	
+	**메모리 재할당**
+	* 파이썬은 필요한 메모리 양이 바뀔 경우, 다시 메모리를 할당 받음
+	  재할당 시 뒷 공간이 충분하다면 그냥 늘리면 되지만, 공간이 없다면 할당 영역을 옮기고 재할당 해야함
+	* 따라서 빈번한 메모리 재할당은 새로운 메모리를 할당 받아야하므로 가급적 피하는 것이 좋음
+	* for 문을 통해 많은 양의 데이터를 list 에 추가하는 경우가 이에 해당됨
+	  Case 5 와 나머지를 비교했을 때, 메모리 사용량이 크게 차이남 
+	
+	```PYTHON
+	import time
+	import random
+	import psutil
+	SIZE = 20_000
+	g_mem = 0
+	
+	# sample_list = [i for i in range(SIZE)]
+	sample_list = random.sample(range(SIZE), SIZE)
+	
+	# memory check
+	def mem_usage():
+		p = psutil.Process()
+		#byte를 사람이 인지하기 쉬운 megabyte로 변환
+		#megabyte이므로 1024 * 1024의 값을 나눠줌
+		return p.memory_info().rss
+
+	# CASE 1
+	# 새 리스트인 [item] 을 case_1 에 더하는 방식으로 case_1 에 할당함
+	# 이 과정에서 [item] 이라는 중간 객체가 생성되므로, 메모리 사용량이 급격히 증가함
+	def f1():
+		global g_mem
+		case_1 = []
+		start_time = time.time()
+		for item in sample_list:
+			case_1 = case_1 + [item]
+		print("CASE 1 TIME : ", time.time() - start_time)
+		print("CASE 1 MEM : ", mem_usage() - g_mem, " BYTES")
+		print()
+
+	# CASE 2
+	# += 연산자로 [item] 을 in-place 로 추가
+	# 메모리 재할당이 발생하지만, 중간 객체가 생성되지 않으으로 CASE1 보다 메모리 효율이 높음
+	def f2():
+		case_2 = []
+		start_time = time.time()
+		for item in sample_list:
+			case_2 += [item]
+		print("CASE 2 TIME : ", time.time() - start_time)
+		print("CASE 2 MEM : ", mem_usage() - g_mem, " BYTES")
+		print()
+	
+	  
+	
+	# CASE 3
+	# in-place 로 추가
+	# CASE2 와 마찬가지로 재할당만 발생
+	def f3():
+		case_3 = []
+		start_time = time.time()
+		for item in sample_list:
+			case_3.append(item)
+		print("CASE 3 TIME : ", time.time() - start_time)
+		print("CASE 3 MEM : ", mem_usage() - g_mem, " BYTES")
+		print()
+
+	# CASE 4
+	# CASE3 의 append 라는 메서드를 호출하는 오버헤드를 줄이고자 했으나, 겨로가적으로 큰 차이 나지 않음
+	# 메모리적으로도 CASE3와 차이나지 않음
+	def f4():
+		case_4 = []
+		start_time = time.time()
+		append_to_4 = case_4.append
+		for item in sample_list:
+			append_to_4(item)
+		print("TEST CASE 4 : ", time.time() - start_time)
+		print("CASE 4 MEM : ", mem_usage() - g_mem, " BYTES")
+		print()
+
+	# CASE 5
+	# 미리 큰 메모리를 할당하므로, 재할당은 발생하지 않음
+	# 초기 메모리 사용량이 큼
+	def f5():
+		case_5 = [1 for _ in range(SIZE)]
+		start_time = time.time()
+		for i, v in enumerate(sample_list):
+			case_5[i] = sample_list[i]
+		print("TEST CASE 5 : ", time.time() - start_time)
+		print("CASE 5 MEM : ", mem_usage() - g_mem, " BYTES")
+		print()
+	
+	g_mem = mem_usage()
+	f1()
+	g_mem = mem_usage()
+	f2()
+	g_mem = mem_usage()
+	f3()
+	g_mem = mem_usage()
+	f4()
+	g_mem = mem_usage()
+	f5()
+	```
+
+10. Lambda 함수 활용
+
+	**Sort**
+	```python
+	a = [(1,2), (2,4), (2,1), (1,6), (1,3), (3,1), (4,7), (3,5)]
+
+	# 리스트 각 원소의 두 번쨰 인덱스(x[1]) 기준으로 정렬 후, 
+	# 첫 번째 인덱스(x[0])으로 정렬
+	a.sort(key = lambda x : (x[1], x[0]))
+	```
+
+	**Map**
+	```python
+	a = [1,2,3,4,5]
+	a = map(lambda x : x * 2, a) # [2,4,6,8,10]
+	```
+
+11. sys.stdin.readline vs input 메서드의 속도 차이
+
+	* 참고
+		* [Velog 파이썬 입력 받기](https://velog.io/@yeseolee/Python-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9E%85%EB%A0%A5-%EC%A0%95%EB%A6%ACsys.stdin.readline)
+	* input 메서드는 내부적으로 stdin(표준 입력)을 입력받기 전 프롬프트를 출력하고, 개행 문자를 제거하는 작업을 수행함
+	* 반면 sys.stdin.readline 는 stdin(표준 입력)에서 한 줄을 읽어들이는 것이 전부이며, 개행 문자를 그대로 포함함
+	* 특히 입력 받는 데이터 양이 많아지면, input 메서드의 오버헤드가 누적되어, 실행 시간을 크게 증가시킬 수 있음
+
+	```python
+	import sys
+	sys_input = sys.stdin.readline.strip
+
+	# 입력받은 N 개의 문자를 MAP 으로 정수 변환 후, 리스트로 저장
+	a = list(map(int, sys_input().split())) 
+	```
+
+12. enumerate
+
+	```python
+	l = [a,b,c,d]
+	for k, v in enumerate(l):
+		print(k ,v) # 0, a / 1, b / 2, c ...
+
+	d = {1:'a',2:'b',3:'c',4:'d',5:'e'}
+
+	for k, v in enumerate(d):
+		print(k, v) # 0 ,1 / 1, 2 / 2, 3 ...
+	```
 
 
-1. list append 시 메모리 재할당 발생
-		https://atelier-house.tistory.com/3
-
-1. sys.stdin.readline / input 차이
-2. sys.stdout.write / print 차이
-3. tuple 로 구성된 list 정렬
-	- 정렬 기준 : tuple 의 두 번째 원소 → 첫 번째 원소 순서
-``` python
-list().sort(key = lambda x : (x[1], x[0]))
-```
-
-
-8. sort vs sorted
-9. itertools - combinations, permutations
-10. visited 구현
-	* x is in list() 대신, boolean list 로 구현
-11. enumerate
+14. sort vs sorted
+15. itertools - combinations, permutations
