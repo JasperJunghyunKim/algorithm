@@ -1,9 +1,7 @@
 
 
 
-https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
-
-
+https://garden1500.tistory.com/8
 [알고리즘 공부 순서 VELOG](https://velog.io/@cxxerry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B3%B5%EB%B6%80-%EC%88%9C%EC%84%9C)
 [알고리즘 공부 순서 - 문제 정리](https://patiencelee.tistory.com/1072)
 [한 장으로 보는 알고리즘 공부 순서](https://velog.io/@ngngs/%ED%95%9C-%EC%9E%A5%EC%9C%BC%EB%A1%9C-%EB%B3%B4%EB%8A%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
@@ -30,11 +28,6 @@ https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 7. 
 
 # 유형
-1. DP
-2. 그래프 이론
-	- 인접
-1. BFS, DFS
-2. 백트래킹
 3.  완전탐색 (Exhaustive Search)
 	* Brute Force
 	* 비트마스크
@@ -147,17 +140,68 @@ https://www.notion.so/59163bcc496c47b790773e312409f364?pvs=4
 	* \[중요\] 그러나 새로운 객체를 할당하는 것은 변수를 직접 수정하는 것과 같으므로, 이 경우엔 #global 키워드를 사용해 전역 변수로 명시해야 함
 		``` Python
 		my_list = [1, 2, 3] 
+	
+		# 전역 변수의 내용을 변경하므로 global 불필요
 		def update_list(): 
-			my_list.append(4) # 전역 변수의 내용을 변경 
+			my_list.append(4)
+			 
+		# 전역 변수에 새로운 객체를 할당하므로 global 필요
 		def replace_list(): 
 			global my_list 
-			my_list = [4, 5, 6] # 전역 변수에 새로운 객체를 할당
+			my_list = [4, 5, 6] 
 		```
 
-
+4. swap
 	
+	```python
+	a = 10, b = 20
+	a, b = b, a
+	print(a, b) # 20, 10
+	```
 
-5. list append 시 메모리 재할당 발생
+5. Collection Comprehension (List, Dict, Set, Tuple)
+	- 새로운 컬렉션을 만들기 위해 기존 컬렉션을 기반으로 간결하게 표현하는 Python 문법
+	- ⚠️ range 는 순차적인 값을 생성하기 위해 사용되며, 기존 컬렉션과는 다름
+	  range 는 모든 값을 메모리에 저장하지 않고, 대신, 필요할 때 마다 숫자를 생성하므로 메모리를 절약할 수 있음
+
+	**기본**
+	```python
+	# [0,1,2,3,4,5]
+	list_a = [i for i in range(6)]
+	```
+
+	**조건부**
+	```python
+	list_a = [0,1,2,3,4,5,6,7,8,9]
+
+	# [0,2,4,6,8]
+	list_b = [i for i in list_a if i % 2 == 0]
+	# [-1,1,-1,3,-1,5,-1,7,-1,9]
+	list_c = [i if i % 2 else -1 for i in list_a]
+	```
+
+	**Dict Deep Copy**
+	```python
+	dict_a = {1:[a,b], 2:[c,d], 3:[e,f], 4:[g,h]}
+	dict_b = {k:v for k, v in dict_a.items()}
+	```
+
+6. Dict 활용
+
+	- 삭제하기 위해선 POP 또는 DEL 메서드를 사용할 수 있음
+		POP 은 제거되는 Key 의 Value 를 반환하며, DEL 은 그냥 제거함
+	-  
+	``` Python
+	a = {1:[1], 2:[2,3]}
+
+	# 추가
+	a[3] = [3,4,5]
+	# 제거 POP
+	
+	# 제거 DEL
+	```
+
+8. list append 시 메모리 재할당 발생
 		https://atelier-house.tistory.com/3
 
 1. sys.stdin.readline / input 차이
@@ -169,14 +213,16 @@ list().sort(key = lambda x : (x[1], x[0]))
 ```
 6. dict keys, dict values, dict items
 7. swap
-``` python
-a = 10, b = 20
-a, b = b, a
-print(a, b) # 20, 10
-```
+
+
 8. sort vs sorted
 9. itertools - combinations, permutations
 10. visited 구현
 	* x is in list() 대신, boolean list 로 구현
 11. enumerate
-12. 
+
+
+
+12. dict 딥카피
+13. list 생성 generations 시 if 문
+14. range 거꾸로 range(SIZE-1, -1, -1)
