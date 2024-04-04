@@ -39,6 +39,10 @@ print(*bfs_visited)
 ---
 ### ⚠️ 주의
 
+1. BFS vs [Dijkstra](./Dijkstra.md)
+   BFS : 모든 간선의 가중치가 양수로 동일한 경우 
+   Dijkstra : 모든 간선이 양수지만, 가중치가 다를 경우
+
 ### 참고
 
 ### 정리중

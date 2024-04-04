@@ -8,7 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4d2df2dbcd77fb86",
+            "id": "cb90086e72787a13",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_Categories/wip ExhaustiveSearch.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0144c4f9152de6fc",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,20 +30,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "cb90086e72787a13",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_Categories/DFS.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -158,16 +159,56 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4d2df2dbcd77fb86",
+  "floating": {
+    "id": "8a13162f947826bc",
+    "type": "floating",
+    "children": [
+      {
+        "id": "13e9f48f5c8b0037",
+        "type": "window",
+        "children": [
+          {
+            "id": "70be2fb29a20f7cd",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "4d2df2dbcd77fb86",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_Categories/DFS.md",
+                    "mode": "source",
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 873,
+        "y": -1055,
+        "width": 960,
+        "height": 1055,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "0144c4f9152de6fc",
   "lastOpenFiles": [
+    "_Categories/DFS.md",
+    "README.md",
+    "_Categories/BFS.md",
+    "_Categories/wip ExhaustiveSearch.md",
+    "_Categories/Dijkstra.md",
+    "_Categories/wip Knapsack.md",
+    "_Categories/DP.md",
     "21609-2.py",
     "21609-1.py",
     "21610-1.py",
     "21611-1.py",
-    "_Categories/BFS.md",
-    "README.md",
-    "_Categories/DFS.md",
-    "_Categories/Dijkstra.md",
     "_Categories/Floyd-Warshall.md",
     "_Categories/BackTracking.md",
     "23288-1.py",
@@ -175,17 +216,14 @@
     "23290-1.py",
     "23291-1.py",
     "_Categories/Union Find.md",
-    "_Categories/DP.md",
     "_Categories/wip DivideConquer.md",
     "_Categories/wip Greedy.md",
     "_Categories/wip Kruskal.md",
     "_Categories/wip Graph.md",
     "_Categories/wip FloodFill.md",
-    "_Categories/wip ExhaustiveSearch.md",
     "_Categories/_Template.md",
     "BOJ_SOLVED_AC/12100-1.py",
     "BOJ_SOLVED_AC/13460-1.py",
-    "BOJ_SOLVED_AC/14500-5.py",
     "완전이진트리.md",
     "_Categories/wip BellmanFord.md",
     "Screenshot 2024-03-29 at 12.40.31 PM.png",

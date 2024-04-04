@@ -47,7 +47,6 @@ print(*dfs_visited)
 ### 유형
 
 1. [BOJ 1260](https://www.acmicpc.net/problem/1260)
-2. 
 
 
 ---
@@ -55,6 +54,9 @@ print(*dfs_visited)
 
 1. [BOJ 1260](https://www.acmicpc.net/problem/1260)를 Stack 으로만 바꿔서 BFS 처럼 풀면, 문제 상 순회 순서 오류가 있음
 2. 개인적으로 Recursive 방식을 권장
+3. [BOJ 2178 미로탐색](https://www.acmicpc.net/problem/2178)과 같이, 최단거리를 찾는 문제는 [BFS](./BFS.md) 또는 [Dijkstra](./Dijkstra.md) 를 사용할 것
+   DFS 는 깊이 있는 경로를 따라가는 중에, 최단 경로보다 훨씬 더 길거나 비효율적인 경로를 여러번 탐색하게 될 수 있음(반면 BFS 는 최단경로를 찾는 순간 Queue를 종료)
+   DFS 는 최초로 목적지 노드에 도달했을 때, 해당 깊이가 반드시 최단거리임을 보장하지 않음 → 모든 노드를 방문하고 비교했을 때만 해당 노드가 최단 거리임을 알 수 있으므로 비효율적임
 
 
 ---
