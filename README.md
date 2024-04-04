@@ -189,8 +189,8 @@ https://garden1500.tistory.com/8
 6. Dict 활용
 
 	- 삭제하기 위해선 POP 또는 DEL 메서드를 사용할 수 있음
-		POP 은 제거되는 Key 의 Value 를 반환하며, DEL 은 그냥 제거함
-	-  
+	  POP 은 제거되는 Key 의 Value 를 반환하며, DEL 은 그냥 제거함
+	  - 뭐지 indent 
 	``` Python
 	a = {1:[1], 2:[2,3]}
 
