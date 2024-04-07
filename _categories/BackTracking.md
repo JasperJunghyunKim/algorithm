@@ -41,7 +41,7 @@ def recursive(cur_row, cur_col):
 
 1. 가능한 (순열, 암호 등) 을 모두 구하는 문제
 2. 가능한 경우의 수를 모두 구하는 문제
-3. N 과 M 순열
+3. [순열, 조합](Combinations%20and%20Permuations.md) - M 과 N (1 ~ 8) 문제
 4. N Queen
 5. 스토쿠
 6. 테트로미노

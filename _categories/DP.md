@@ -13,13 +13,16 @@
    즉, 전체 문제의 해가 부분 문제의 해에서 유도될 수 있을 때 사용 가능
 
 
+
 ---
 ### 구현
 
 1. DP 배열을 정의한다. 
-   * 예) i 번째까지 실행했을 때의 최적해
-2. DP 배열의 점화식을 찾는다. 2, 3차원 배열이될 수도 있으며, 배열 간 서로 영향을 줄 수도 있음
-3. Bottom Up 또는 Top Down 중 적절한 방식으로 구현한다.
+   이때 DP 는 다차원 배열이 될 있다.
+   * 예1) DP\[i\] : i 번째까지 실행했을 때의 최대값
+   * 예2) DP\[i\]\[w\] 번째까지 고려했을 때, 최대 무게 w 를 넘지 않는 범위 내에서 얻을 수 있는 최대 가치
+1. DP 배열의 점화식을 찾는다. 2, 3차원 배열이될 수도 있으며, 배열 간 서로 영향을 줄 수도 있음
+2. Bottom Up 또는 Top Down 중 적절한 방식으로 구현한다.
 
 ### 구현_Bottom Up (Tabulation 방식)
 
@@ -32,6 +35,8 @@
 * 이를 위해 재귀함수를 사용하여 문제를 작은 부분 문제로 쪼개고, 중복되는 계산을 피하기 위해 Memoization 을 활용
 
 ### 구현 비교 - Top Down vs Bottom Up
+
+* 둘 다 공통적으로 한 번 계산된 값을 저장하는 특징이 있음
 
 **Bottom Up** 
 * 반복문을 순회하며 작은 문제의 결과를 테이블에 저장하므로, 코드가 일반적으로 더 직관적임
@@ -48,12 +53,42 @@
 ---
 ### 유형
 
-* 피보나치 수
-- 0-1 Knapsack Problem
-- 길이 N 배열 여러개가 서로 영향을 주는 점화식
-  예) [RGB 거리](https://www.acmicpc.net/problem/1149)
-- 최장 증가 부분 수열(Longest Increasing Subsequence, LIS)
-- 최장 공통 부분 수열(Longest Common Subsequence, LCS)
+* DP 는 점화식을 잘 정의하는 것이 핵심
+* 점화식을 찾는 것이 어려우므로 주의
+* 또한 점화식마다 인덱스의 범위 제한을 정해야되는 경우도 있음
+
+1.  피보나치 수
+	* 
+2. [0-1 Knapsack Problem](./Knapsack.md)
+3. [퇴사](https://www.acmicpc.net/problem/14501), 
+4. [포도주 시식](https://www.acmicpc.net/problem/2156)
+	$$dp[i] = max(wine[i] + wine[i-1] + dp[i-3], wine[i] + dp[i-2], dp[i-1])$$
+	* dp\[i\] 는 i 번째 포도주를 시직할 때의 최대량
+	* wine\[i\] + wine\[i-1\] + dp\[i-3\]
+	  i, i-1 에서는 마시고, i-2 는 마시지 않는 경우
+	  즉, i-2 는 마시지 않으므로, i-3 의 최대량을 고려하는 것과 동일
+	* wine\[i\] + dp\[i-2\]
+	  i 에서는 마시고, i-1 은 마시지 않는 경우
+	  즉, i-1 은 마시지 않으므로, i-2 의 최대량을 고려하는 것과 동일
+	* dp\[i-1\]
+	  i 에서 와인을 마시지 않는 경우를 의미, 즉, i-1 째 칸까지의 최대량과 동일
+	* 어느 위치에서 마시지 않는지를 기준으로 조건을 정리하는 것이 핵심
+	  i 를 마시지 않으면, i-1 까지의 최대량과 같음
+	
+5. [계단오르기](https://www.acmicpc.net/problem/2579)
+	$$dp[i] = max(step[i] + step[i-1] + dp[i-3], step[i] + dp[i-2])$$
+	* dp\[i\] 는 i 째 계단을 무조건 밟았을 때의 최대값
+	* step\[i\] + step\[i-1\] + dp\[i-3\]
+	  i - 2 째를 밟지 않는 경우가 포함되어 있음
+	* step\[i\] + dp\[i-2\]
+	  i - 1 째를 밟지 않는 경우가 포함되어 있음
+	* [이 코드](../BOJ_SOLVED_AC/2579-2.py)를 보면 i 째 계단을 밟지 않는 경우를 고려한 DP 배열, i 째 계단을 밟는 경우를 고려한 DP_MUST 배열을 둘 다 정의했는데, 결국 풀어보니 DP_MUST 만 사용함
+	  즉, DP 배열을 잘 정의하는 것이 매우 중요
+
+
+6. 길이 N 배열 여러개가 서로 영향을 주는 점화식 예) [RGB 거리](https://www.acmicpc.net/problem/1149)
+7. 최장 증가 부분 수열(Longest Increasing Subsequence, LIS)
+8. 최장 공통 부분 수열(Longest Common Subsequence, LCS)
 
 
 ---

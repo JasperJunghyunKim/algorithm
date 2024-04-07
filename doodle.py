@@ -1,3 +1,23 @@
-d = {1:'a',2:'b',3:'c',4:'d',5:'e'}
-for k, v in enumerate(d):
-    print(k, v)
+import time
+import random
+
+before = time.time()
+a = [0] * 1_000_000
+print("[0] * N : ", time.time()-before, "s")
+print()
+
+before = time.time()
+a = [0 for _ in range(1_000_000)]
+print("0 - COMPREHENSION : ", time.time()-before, "s")
+print()
+
+
+for _ in range(1_000_000):
+    a.append(random.randint(1, 10000))
+print("RANDOM APPEND : ", time.time()-before, "s")
+print()
+
+before = time.time()
+a = [random.randint(1, 10000) for _ in range(1_000_000)]
+print("RANDOM COMPREHENSION : ", time.time()-before, "s")
+print()

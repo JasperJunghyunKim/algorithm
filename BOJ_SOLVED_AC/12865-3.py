@@ -29,3 +29,5 @@ for w in range(1, MAX_WEIGHT + 1):
             dp[w][i] = dp[w][i-1]
 
 print(max(dp[MAX_WEIGHT]))
+
+

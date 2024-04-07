@@ -7,6 +7,19 @@ https://garden1500.tistory.com/8
 [한 장으로 보는 알고리즘 공부 순서](https://velog.io/@ngngs/%ED%95%9C-%EC%9E%A5%EC%9C%BC%EB%A1%9C-%EB%B3%B4%EB%8A%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 
+int형은 4바이트입니다.
+
+1KB는 1024바이트입니다.
+
+1MB는 1024KB입니다.
+
+128MB = 128 * 1024KB = 128 * 1024 * 1024B = int형 128 * 1024 * 1024 / 4개 = 33554432개입니다.
+
+사실 1024로 계산하기가 까다로워서, 대충 1000이라고 놓고 계산하면 얼추 맞습니다.
+
+
+* 자료형 별 메모리 정리
+
 # 복잡도 계산
 * [코드의 시간 복잡도 계산하기 MEDIUM](https://medium.com/humanscape-tech/%EC%BD%94%EB%93%9C%EC%9D%98-%EC%8B%9C%EA%B0%84-%EB%B3%B5%EC%9E%A1%EB%8F%84-%EA%B3%84%EC%82%B0%ED%95%98%EA%B8%B0-b67dd8625966)
 * [빅오 표기법을 설명하다 - 시간과 공간의 복잡도](https://www.freecodecamp.org/korean/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/)
@@ -71,17 +84,35 @@ https://garden1500.tistory.com/8
 -----------
 
 
-# Python 구현 팁
+# 문제 구현 (Python)
+
+* 연습 문제 풀이 시, ⚠️ 자주 발생했던 실수 정리 ⚠️ 
+* 구현에 도움되는 내장함수 또는 모듈 정리
 
 1. Deep Copy + Slicing
-	
+
+	* 문제를 풀 때, 컬렉션(특히 리스트)을 복사할 경우가 있음
+	* 이때, 단순히 새로운 변수에 대입해버리면 메모리 주소도 복사되어 기존 배열을 건드리는 경우가 있음
+	* 따라서 slicing 을 사용하거나, copy 모듈을 사용	
 	``` Python
 	a = [1,2,3]
 	b = a[::]
+
+	import copy
+	c = copy.deepcopy(a)
+	```
+
+	**⚠️ 2 차원 배열 Deep Copy**
+	* 2 차원 배열은, list 안에 list 가 중첩된 구조로, 참조형 자료형이 또 있기 때문에, 단순히 위와 같이 slicing 하면 안됨
+	* list 내 각각의 list 에 대하여 slicing 필요
+	* ~~[BOJ 14502 연구소](https://www.acmicpc.net/problem/14502) 문제풀면서 틀릴뻔 함~~
+	```python
+	a = [[1,2,3,4], [5,6,7,8], [9,10,11,12]]
+	b = [i[::] for i in a]
 	```
 
 
-2. Visited Check 성능 비교
+2. 자료구조 별 Visited Check 성능 비교
 	
 	* BFS, DFS, FloodFill, BackTracking 등에서 사용되는 Visited 사용 방법
 	* 리스트, 딕셔너리를 활용한 특정 좌표의 visited 여부 체크 방법
@@ -329,6 +360,54 @@ https://garden1500.tistory.com/8
 	f5()
 	```
 
+	```python
+	import time
+
+	import random
+	
+	  
+	
+	before = time.time()
+	
+	a = [0] * 1_000_000
+	
+	print("[0] * N : ", time.time()-before, "s")
+	
+	print()
+	
+	  
+	
+	before = time.time()
+	
+	a = [0 for _ in range(1_000_000)]
+	
+	print("0 - COMPREHENSION : ", time.time()-before, "s")
+	
+	print()
+	
+	  
+	  
+	
+	for _ in range(1_000_000):
+	
+	a.append(random.randint(1, 10000))
+	
+	print("RANDOM APPEND : ", time.time()-before, "s")
+	
+	print()
+	
+	  
+	
+	before = time.time()
+	
+	a = [random.randint(1, 10000) for _ in range(1_000_000)]
+	
+	print("RANDOM COMPREHENSION : ", time.time()-before, "s")
+	
+	print()
+	```
+
+
 10. Lambda 함수 활용
 
 	**Sort**
@@ -356,10 +435,10 @@ https://garden1500.tistory.com/8
 
 	```python
 	import sys
-	sys_input = sys.stdin.readline.strip
+	sys_input = sys.stdin.readline
 
 	# 입력받은 N 개의 문자를 MAP 으로 정수 변환 후, 리스트로 저장
-	a = list(map(int, sys_input().split())) 
+	a = list(map(int, sys_input().strip().split())) 
 	```
 
 12. enumerate
@@ -375,6 +454,40 @@ https://garden1500.tistory.com/8
 		print(k, v) # 0 ,1 / 1, 2 / 2, 3 ...
 	```
 
+13. zip
+	
+	* 두 개 이상의 iterable 객체에 대하여, 여러 데이터를 병렬로 처리해야 할 때 유용하게 사용됨 
+	* 예를 들어, 두 리스트의 같은 위치에 있는 요소들을 동시에 처리하거나, 여러 리스트의 요소들로부터 새로운 데이터 구조를 생성할 때 활용
+	* iterable 중 짧은 것을 기준으로 반환
+	
+	```python
+	a = [1, 2, 3]
+	b = ['a', 'b', 'c', 'd']
+	print(list(zip(a, b))) # [(1, 'a'), (2, 'b'), (3, 'c')]
+	```
+	
+14. iteration 실행 시 dictionary 사이즈 변경 불가
 
-14. sort vs sorted
-15. itertools - combinations, permutations
+	* RuntimeError: dictionary changed size during iteration
+	```python
+	a = {1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8}
+	
+	for k,v in a.items():
+		if k % 2 == 0:
+		a.pop(k)
+	```
+
+15. 참조형 변수
+
+	* ~~Param 으로 참조형 자료형을 넣고, 그 자료형 자체가 변경되었을 때 리턴되는거~~
+
+16. sort vs sorted, reverse vs reversed
+
+	* 속도는 sort, reverse 가 더 빠름
+	* sorted, reversed 는 메모리를 2 배 사용하기 때문
+
+17. itertools - combinations, permutations
+18. if (a_r, a_c) == (b_r, b_c) == (c_r, c_c): continue
+19. recursion limut
+	* https://fuzzysound.github.io/sys-setrecursionlimit
+	* 1000 으로 매우 낮음
