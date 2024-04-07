@@ -56,12 +56,45 @@
 * DP 는 점화식을 잘 정의하는 것이 핵심
 * 점화식을 찾는 것이 어려우므로 주의
 * 또한 점화식마다 인덱스의 범위 제한을 정해야되는 경우도 있음
+* 대부분의 문제에서 공통적으로 점화식 DP를 아래와 같이 정의했음
+	**순서가 정해져 있는 경우**
+	1. dp\[i\] 는 i 번째를 선택할 때의 최적해
+	2. dp\[i\] 는 i 번째를 반드시 선택할 경우의 최적해
+	3. dp\[i\]\[k\] 는 k 라는 제한된 범위에 대해, i 번째 아이템을 선택할 경우의 최적해
+	
+	**순서가 정해져 있지 않은 경우**
+	1. 
 
-1.  피보나치 수
+1. 피보나치 수
+2. [평범한 배낭 1](https://www.acmicpc.net/problem/12865)
+	
+	* [0-1 Knapsack Problem](Knapsack.md)
+	* 제한된 무게 내에서 최대의 가치를 만들 수 있는 아이템들을 선택하는 문제 
+		$$dp[i][capa] = max(dp[i-1][capa], v_i + dp[i-1][capa - w_i]$$
+	* dp\[i\]\[capa\] 는 제한된 무게가 capa 일 때, i 번째 아이템을 선택할 때의 최대 가치
+	* dp\[i-1\]\[capa\]
+	  i 번째 아이템을 선택하지 않는 경우를 의미
+	  즉, 동일한 제한 무게 capa 에 대하여 i-1 째 아이템을 선택하는 최대 가치와 같음
+	* v_i + dp\[i-1\]\[capa - w_i\]
+	  i 번째 아이템을 선택하는 경우를 의미
+	  i 를 선택하므로 v 만큼 더하고, 제한 무게는 선택한 w 만큼 뺀 값으로 줄어듦
+
+3. [평범한 배낭 2](https://www.acmicpc.net/problem/12920)
+	
 	* 
-2. [0-1 Knapsack Problem](./Knapsack.md)
-3. [퇴사](https://www.acmicpc.net/problem/14501), 
-4. [포도주 시식](https://www.acmicpc.net/problem/2156)
+4. [퇴사](https://www.acmicpc.net/problem/14501)
+	
+	* [0-1 Knapsack Problem](Knapsack.md)
+	* 제한된 시간 내에서 최대의 가치를 만들 수 있는 미팅을 선택하는 문제
+	* 단, [평범한 배낭 1](https://www.acmicpc.net/problem/12865) 문제와 달리, Day(index)가 증가하면서, 제한되는 시간이 자동으로 1 씩 추가로 차감됨
+		$$dp[i][d] = max(dp[i-1][d+1], p_i + dp[i-1][d+1-t_i])$$
+	* 제한된 날짜가 d 일 때, i 째 날에 미팅을 진행할 경우의 최대 가치
+	* dp\[i-1\]\[d+1\]
+	  i 째 날에 미팅을 진행하지 않을 경우를 의미
+	  즉, i - 1 째 날의 최적해와 같음
+	  단, 이 문제에선 하루 전으로 당기게 되면, 제한된 날짜는 자동으로 하루가 많아지므로 d + 1 이 됨  
+
+5. [포도주 시식](https://www.acmicpc.net/problem/2156)
 	$$dp[i] = max(wine[i] + wine[i-1] + dp[i-3], wine[i] + dp[i-2], dp[i-1])$$
 	* dp\[i\] 는 i 번째 포도주를 시직할 때의 최대량
 	* wine\[i\] + wine\[i-1\] + dp\[i-3\]

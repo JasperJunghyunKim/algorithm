@@ -29,17 +29,21 @@ print(*bfs_visited)
 ---
 ### 유형
 
-1. [BOJ 1260](https://www.acmicpc.net/problem/1260)
-2. 연결 요소 파악
-	* 바이러스가 퍼질 때, 어떤 컴퓨터가 살아남는지
-3. 최단 경로 찾기
-4. 미로 찾기
+1. [BFS, DFS 구현](https://www.acmicpc.net/problem/1260)
+2. [숨바꼭질](https://www.acmicpc.net/problem/1697)
+   문제 조건을 그래프로 구현했을 때, BFS 로 접근할 수 있음을 파악하는 것이 핵심
+   
+3. 연결 요소 파악
+   바이러스가 퍼질 때, 어떤 컴퓨터가 살아남는지
+  
+4. 최단 경로 찾기
+5. 미로 찾기
 
 
 ---
 ### ⚠️ 주의
 
-1. BFS vs [Dijkstra](./Dijkstra.md)
+1. BFS vs [Dijkstra](Dijkstra.md)
    BFS : 모든 간선의 가중치가 양수로 동일한 경우 
    Dijkstra : 모든 간선이 양수지만, 가중치가 다를 경우
 
