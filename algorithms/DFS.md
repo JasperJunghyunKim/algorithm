@@ -1,4 +1,4 @@
-### 개념
+ ### 개념
 
 * Depth First Search
 * [그래프](wip%20Graph.md) 의 모든 노드를 체계적으로 탐색하는 알고리즘 중 하나로, 시작 정점으로부터 깊이를 우선적으로 탐색하며 가능한 멀리 있는 정점을 먼저 방문하고, 더 이상 방문할 정점이 없을 때 이전 분기점으로 돌아가 다른 경로를 탐색하는 방식
@@ -14,7 +14,7 @@
 ```Python
 dfs_visited = [START_V]
 dfs_to_visit = [START_V]
-
+ㅋ
 while dfs_to_visit:
 	cur_v = dfs_to_visit.pop() # stack
 	for next_v in range(1, NUM_V + 1):

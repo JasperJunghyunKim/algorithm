@@ -83,8 +83,22 @@ int형은 4바이트입니다.
 	- 슬라이딩 윈도우 알고리즘, 세그먼트 트리, DP, 루트 N 으로 나누기, 2차원 배열에 저장하는 방법, 다 해보는 방법
 
 
+## 시험 전
+
+ * BFS, DFS
+ * BackTracking
+ * Dijkstra
+ * Divide and Conquer
+ * Floyd Warshall
+ * Union Find
+ * Permutations and Combinations
+ * Backtracking
+ * 
+
+
+
 -----------
-# 문제 구현 (Python)
+## 문제 구현 (Python)
 
 * 연습 문제 풀이 시, ⚠️ 자주 발생했던 실수 정리 ⚠️ 
 * 구현에 도움되는 내장함수 또는 모듈 정리
@@ -477,17 +491,23 @@ int형은 4바이트입니다.
 		a.pop(k)
 	```
 
-15. 참조형 변수
+15. 순열과 조합
+
+	* 대부분의 시험에서는 itertools 라이브러리 사용이 불가함
+	* 따라서 직접 구현할 수 있어야 함
+	* [Permuations and Combinations](Permutations%20and%20Combinations.md)
+	
+16. 참조형 변수
 
 	* ~~Param 으로 참조형 자료형을 넣고, 그 자료형 자체가 변경되었을 때 리턴되는거~~
 
-16. sort vs sorted, reverse vs reversed
+2. sort vs sorted, reverse vs reversed
 
 	* 속도는 sort, reverse 가 더 빠름
 	* sorted, reversed 는 메모리를 2 배 사용하기 때문
 
-17. itertools - combinations, permutations
-18. if (a_r, a_c) == (b_r, b_c) == (c_r, c_c): continue
-19. recursion limut
+3. itertools - combinations, permutations
+4. if (a_r, a_c) == (b_r, b_c) == (c_r, c_c): continue
+5. recursion limut
 	* https://fuzzysound.github.io/sys-setrecursionlimit
 	* 1000 으로 매우 낮음

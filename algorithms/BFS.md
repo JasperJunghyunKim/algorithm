@@ -32,12 +32,10 @@ print(*bfs_visited)
 1. [BFS, DFS 구현](https://www.acmicpc.net/problem/1260)
 2. [숨바꼭질](https://www.acmicpc.net/problem/1697)
    문제 조건을 그래프로 구현했을 때, BFS 로 접근할 수 있음을 파악하는 것이 핵심
-   
 3. 연결 요소 파악
    바이러스가 퍼질 때, 어떤 컴퓨터가 살아남는지
-  
-4. 최단 경로 찾기
-5. 미로 찾기
+1. 최단 경로 찾기
+2. 미로 찾기
 
 
 ---
