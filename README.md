@@ -85,15 +85,9 @@ int형은 4바이트입니다.
 
 ## 시험 전
 
- * BFS, DFS
- * BackTracking
- * Dijkstra
- * Divide and Conquer
- * Floyd Warshall
- * Union Find
- * Permutations and Combinations
- * Backtracking
- * 
+
+
+
 
 
 
@@ -495,7 +489,7 @@ int형은 4바이트입니다.
 
 	* 대부분의 시험에서는 itertools 라이브러리 사용이 불가함
 	* 따라서 직접 구현할 수 있어야 함
-	* [Permuations and Combinations](Permutations%20and%20Combinations.md)
+	* [Permuations and Combinations](Permutations_and_Combinations.md)
 	
 16. 참조형 변수
 
@@ -511,3 +505,5 @@ int형은 4바이트입니다.
 5. recursion limut
 	* https://fuzzysound.github.io/sys-setrecursionlimit
 	* 1000 으로 매우 낮음
+6. 대각선 상하
+	* N Queen 문제*

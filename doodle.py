@@ -1,37 +1,73 @@
-import sys
-sys_input = sys.stdin.readline
+import time
+numbers = [i for i in range(1, 21)]
+number_check = [False for _ in range(20)]
+LEN_NUMBERS = len(numbers)
 
-NUM_SETS, NUM_CMD = map(int, sys_input().strip().split())
-
-# Make Set
-root = [i for i in range(NUM_SETS + 1)]
-depth = [0 for _ in range(NUM_SETS + 1)]
-
-# Union
-def union(x, y):
-    x = find(x)
-    y = find(y)
-    if x == y:
+def combination(cnt, r, idx):
+    global g_cnt
+    global g_test_summation
+    if cnt == r:
+        for i in range(LEN_NUMBERS):
+            if number_check[i]: g_test_summation += numbers[i]
+        g_cnt += 1
         return
-    if depth[x] > depth[y]:
-        root[y] = x
-    elif depth[y] > depth[x]:
-        root[x] = y
-    else:
-        root[x] = y
-        depth[y] += 1
+    for i in range(idx, LEN_NUMBERS):
+        number_check[i] = True
+        combination(cnt + 1, r, i + 1)
+        number_check[i] = False
+     
+def combination2(l, cnt, r, idx):
+    global g_cnt
+    global g_test_summation
+    if cnt == r:
+        for i in l:
+            g_test_summation += i
+        g_cnt += 1
+        return
+    for i in range(idx, LEN_NUMBERS):
+        combination2(l + [numbers[i]], cnt + 1, r, i + 1)
+        
+def combination3(l, cnt, r, idx):
+    global g_cnt
+    global g_test_summation
+    if cnt == r:
+        for i in l:
+            g_test_summation += i
+        g_cnt += 1
+        return
+    for i in range(idx, LEN_NUMBERS):
+        nl = l[::]
+        nl.append(numbers[i])
+        combination3(nl, cnt + 1, r, i + 1)
+        
 
-# Find
-def find(x):
-    if x == root[x]:
-        return x
-    root[x] = find(root[x])
-    return root[x]
+        
 
-for _ in range(NUM_CMD):
-    cmd, x, y = map(int, sys_input().strip().split())
-    if cmd == 0:
-        union(x, y)
-    elif cmd == 1:
-        if find(x) == find(y): print("YES")
-        else: print("NO")
+g_cnt = 1
+g_test_summation = 0
+start_time = time.time()   
+combination(0, 9, 0)
+print("combination 1 : Using Boolean Check List")
+print(g_test_summation)
+print(g_cnt)
+print(time.time() - start_time)
+
+
+g_cnt = 1
+g_test_summation = 0
+start_time = time.time()   
+combination2([], 0, 9, 0)
+print("combination 2 : By adding an item directly to new list")
+print(g_test_summation)
+print(g_cnt)
+print(time.time() - start_time)
+
+
+g_cnt = 1
+g_test_summation = 0
+start_time = time.time()   
+combination3([], 0, 9, 0)
+print("combination 3 : By adding an item using append method to new list")
+print(g_test_summation)
+print(g_cnt)
+print(time.time() - start_time)

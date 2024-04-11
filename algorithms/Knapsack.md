@@ -13,7 +13,7 @@
 * [Greedy](Greedy.md) 알고리즘에 해당
 
 
-### 구현 - 01 Knapsack Problem (item 중복 없는, 2차원 배열 DP)
+### 구현 - 01 Knapsack Problem (item 중복 없는 2차원 배열)
 
 * 각 아이템이 1개만 있는 조건에서, 이를 2차원 DP 배열을 사용하여 해결하는 문제
 * dp\[i\]\[w\]
@@ -34,7 +34,7 @@
 ```
 
 
-### 구현 - 01 Knapsack Problem (item 중복 없는, 1차원 배열 DP)
+### 구현 - 01 Knapsack Problem (item 중복 없는 1차원 배열)
 
 * 위와 동일한 조건이지만, 1차원 배열을 사용하여 해결
 * dp\[w\]
@@ -53,9 +53,9 @@ for w, v in items:
 ```
 
 
-### 구현 - 01 Knapsack Problem (item 중복 가능한)
+### 구현 - 01 Knapsack Problem (item 중복 가능한 경우)
 
-* ⚠️중복없는 item, 2차원 배열 DP⚠️ 를 풀면서, i 번째를 선택할 때의 최적해라고 생각했음
+* [[#구현 - 01 Knapsack Problem (item 중복 없는 2차원 배열)]] 를 풀면서, i 번째를 선택할 때의 최적해라고 생각했음
   즉, 물건을 선택하는 순서가 정해져있고, 순서가 바뀔 경우에 답이 달라질 것이라 생각함
   그러나 이 점화식은 **배낭의 가용 중량이 W 일 때, 넣을 수 있는 최대 무게**가 핵심이지, i 순서를 고려한 것은 2 차원 배열에서 Bottom Up 방식으로 해결하기 위한 방법에 불과한 것 이었음
   따라서 item 의 weight, value 입력 순서를 섞어도 결과는 동일하게 나옴
@@ -94,20 +94,7 @@ for weight, value in items:
 
 ---
 ### 유형
-* 
-
-
-
 ### ⚠️ 주의
-
 ### 참고
-
+* [블로그](https://howudong.tistory.com/106#article-1--%EB%B0%B0%EB%82%AD-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9D%B4%EB%9E%80?)
 ### 정리중
-
-
-
-* 두 가지 유형이 있음 
-	* 분할 가능 냅색
-	* 0-1 냅색
-	* https://namu.wiki/w/%EB%B0%B0%EB%82%AD%20%EB%AC%B8%EC%A0%9C#s-2
-* https://howudong.tistory.com/106
