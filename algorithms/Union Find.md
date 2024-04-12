@@ -81,7 +81,7 @@ def union(a, b)
 ### 유형
 1. 두 집합이 합쳐지면서 capacity 가 늘어나고, 해당 집합에 포함되는 대상의 개수(size)가 capacity 를 초과하지 않는지를 확인하는 문제
 	- [방청소](https://www.acmicpc.net/problem/9938)
-2. [wip Kruskal](wip%20Kruskal.md) MST 알고리즘
+2. [wip Kruskal (MST)](wip%20Kruskal%20(MST).md) MST 알고리즘
 
 
 ---

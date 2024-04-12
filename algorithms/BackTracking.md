@@ -60,7 +60,7 @@ def backtrack(r):
 	* Pruning 조건 매우 중요
 	* 1차원 배열만으로 visited 체크하여, 시간복잡도를 줄임
 	* 대각선 확인 방법 주의
-2. [순열, 조합](Permutations_and_Combinations.md) - M 과 N (1 ~ 8) 문제
+2. [순열, 조합](Permutations%20and%20Combinations.md) - M 과 N (1 ~ 8) 문제
 4. 스토쿠
 5. 테트로미노
 

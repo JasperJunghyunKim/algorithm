@@ -1,3 +1,7 @@
+#
+# 실패 코드
+#
+
 import sys
 sys_input = sys.stdin.readline
 

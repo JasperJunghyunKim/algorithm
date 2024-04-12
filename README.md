@@ -83,12 +83,39 @@ int형은 4바이트입니다.
 	- 슬라이딩 윈도우 알고리즘, 세그먼트 트리, DP, 루트 N 으로 나누기, 2차원 배열에 저장하는 방법, 다 해보는 방법
 
 
-## 시험 전
+## Python3, PyPy3 차이
 
+* 일부 문제는 PyPy3 로 실행했을 때만 시간초과 없이 통과됨
+* PyPy3 는 무엇이고, Python3 와는 어떤 차이가 있는지 확인
 
+**Python**
+* Python 은 기본적으로 인터프리터 언어로 분류
+* `.py` 으로 작성된 코드는 바이트 코드인 `.pyc` 파일로 컴파일되는 중간 단계를 거치며, 이 바이트 코드는 Python VM (PVM) 위에서 실행됨
+* 컴파일 과정이 있음에도 Python 은 인터프리터 언어로 분류됨
+* 대표적으로 두 종류의 인터프리터가 있음 #CPython #PyPy3
 
+**CPython(Python3)**
+* Python 언어의 가장 기본적이고 널리 사용되는 구현
+* C 는 인터프리터가 C 언어로 작성되었음을 의미
+* Python 으로 작성된 대부분의 라이브러라와 프레임워크는 CPython 과 호환됨
+* CPython은 Python의 표준 라이브러리와 함께 제공되며, 플랫폼 독립적인 프로그래밍과 확장 모듈을 지원
 
+**PyPy3**
+* Python3 코드를 실행하기 위한 대체 인터프리터(Interpreter)
+* Just-In-Time(JIT) 컴파일러를 사용하며, 이는 프로그램 실행 중에 코드를 분석하고 자주 실행되는 부분(핫스팟)을 감지하여 기계어로 변환
+* 따라서 반복적인 계산이 많거나 장시간 실행되는 스크립트에서 Python3(CPython)보다 뛰어난 성능을 보임
+	* 반복문을 통한 계산
+	* 재귀 함수 (예. [BackTracking](./algorithms/BackTracking.md))
+	* 수학적 계산이 많이 요구되는 경우 (예. [DP](./algorithms/DP.md) 와 같이 값을 계속 갱신해야되는 경우)
+* 그러나 일부 경우엔 Python3의 코드와 완벽하게 호환되지 않을 수 있으며, C 확장 모듈과의 호환성이 제한될 수 있음
 
+**결론**
+* 둘 다 Python 인터프리터의 일종
+* 반복되는 코드가 많을 경우 PyPy3 가 실행 성능이 더 빠를 수 있음
+* 단, 실행 코드가 PyPy3 와 호환되지 않을 수 있으므로 유의
+
+**출처**
+* [블로그](https://ralp0217.tistory.com/entry/Python3-%EC%99%80-PyPy3-%EC%B0%A8%EC%9D%B4)
 
 
 -----------
@@ -489,21 +516,29 @@ int형은 4바이트입니다.
 
 	* 대부분의 시험에서는 itertools 라이브러리 사용이 불가함
 	* 따라서 직접 구현할 수 있어야 함
-	* [Permuations and Combinations](Permutations_and_Combinations.md)
+	* [Permuations and Combinations](Permutations%20and%20Combinations.md)
 	
 16. 참조형 변수
 
 	* ~~Param 으로 참조형 자료형을 넣고, 그 자료형 자체가 변경되었을 때 리턴되는거~~
 
-2. sort vs sorted, reverse vs reversed
+17. sort vs sorted, reverse vs reversed
 
 	* 속도는 sort, reverse 가 더 빠름
 	* sorted, reversed 는 메모리를 2 배 사용하기 때문
 
-3. itertools - combinations, permutations
-4. if (a_r, a_c) == (b_r, b_c) == (c_r, c_c): continue
-5. recursion limut
+18. 그래프 사이클 찾기
+
+	* 무방향 그래프인 경우 Union Find
+	  Union 시, 두 노드의 부모가 같으면 사이클이 존재
+	* 방향 그래프인 경우 DFS
+	  방문했던 Edge 가 있는지, 즉, 백 엣지가 있는지로 판단
+
+
+	
+	
+
+1. if (a_r, a_c) == (b_r, b_c) == (c_r, c_c): continue
+2. recursion limut
 	* https://fuzzysound.github.io/sys-setrecursionlimit
 	* 1000 으로 매우 낮음
-6. 대각선 상하
-	* N Queen 문제*

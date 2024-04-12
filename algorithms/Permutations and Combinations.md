@@ -1,16 +1,16 @@
 ### 개념
 
 * 대부분의 시험에서는 itertools 라이브러리 사용이 불가함
-* 따라서 [Back Tracking](./BackTracking.md) 을 사용하여 직접 구현 필요
+* 따라서 [BackTracking](./BackTracking.md) 을 사용하여 직접 구현 필요
 
 
 ### ⚠️ 주의 ⚠️
 
 * 조합을 생성하는 BackTracking 함수를 예로, boolean list 체크 방식과 새로운 리스트에 아이템을 직접 추가하는 방식이 있음
 * 이때, 조합을 만드는 것은 boolean list 방식이 빠름
-  (매 재귀마다 아이템을 추가하는 Overhead 가 없으므로)
+  (매 재귀마다 아이템을 추가하는 overhead 가 없으므로)
 * 단, 실제 조합 리스트를 추출하기까진 후자 방식이 빠름
-  (boolean list 방식은, check 여부를 판단하여 리스트를 만들어 내는 오버헤드가 존재하기 때문)
+  (boolean list 방식은, check 여부를 판단하여 리스트를 만들어 내는 overhead 가 존재하기 때문)
   즉, O(N) 이 더 소요됨
 	``` python
 	import time
