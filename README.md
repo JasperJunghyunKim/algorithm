@@ -1,88 +1,62 @@
+## \[WIP\]시간복잡도, 공간복잡도 (Python3 기준)
 
-
-* 
-
-
-https://garden1500.tistory.com/8
-[알고리즘 공부 순서 VELOG](https://velog.io/@cxxerry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B3%B5%EB%B6%80-%EC%88%9C%EC%84%9C)
-[알고리즘 공부 순서 - 문제 정리](https://patiencelee.tistory.com/1072)
-[한 장으로 보는 알고리즘 공부 순서](https://velog.io/@ngngs/%ED%95%9C-%EC%9E%A5%EC%9C%BC%EB%A1%9C-%EB%B3%B4%EB%8A%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
-
-
-int형은 4바이트입니다.
-
-1KB는 1024바이트입니다.
-
-1MB는 1024KB입니다.
-
-128MB = 128 * 1024KB = 128 * 1024 * 1024B = int형 128 * 1024 * 1024 / 4개 = 33554432개입니다.
-
-사실 1024로 계산하기가 까다로워서, 대충 1000이라고 놓고 계산하면 얼추 맞습니다.
-
-
-* 자료형 별 메모리 정리
-
-# 복잡도 계산
-* [코드의 시간 복잡도 계산하기 MEDIUM](https://medium.com/humanscape-tech/%EC%BD%94%EB%93%9C%EC%9D%98-%EC%8B%9C%EA%B0%84-%EB%B3%B5%EC%9E%A1%EB%8F%84-%EA%B3%84%EC%82%B0%ED%95%98%EA%B8%B0-b67dd8625966)
+**Big-O Notation**
 * [빅오 표기법을 설명하다 - 시간과 공간의 복잡도](https://www.freecodecamp.org/korean/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/)
 * [Complexity Cheat Sheet](https://www.bigocheatsheet.com/)
-* [Practice Questions](https://www.geeksforgeeks.org/practice-questions-time-complexity-analysis/)
 
-1. 시간복잡도
-2. 공강복잡도
-	- 메모리 사용량 계산 https://zoosso.tistory.com/995
+**공간 복잡도**
+* WIP
 
+**시간 복잡도
+* WIP
+* [코드의 시간 복잡도 계산하기 MEDIUM](https://medium.com/humanscape-tech/%EC%BD%94%EB%93%9C%EC%9D%98-%EC%8B%9C%EA%B0%84-%EB%B3%B5%EC%9E%A1%EB%8F%84-%EA%B3%84%EC%82%B0%ED%95%98%EA%B8%B0-b67dd8625966)
 
-# Python 자료 구조
-1. List
-2. Set
-3. 해시테이블 Dict
-4. Queue, Stack
-5. Heap
-6. Tree
-7. 
+**메모리 계산**
+* 메모리 사용량 계산
+* 1 MB = 1024 KB, 1KB = 1024 Bytes → 즉, 1 MB = 1024 ^ 2 Bytes 
+  (일반적으로 1000 * 1000 으로 계산)
+* 파이썬의 int 자료형은 크기가 고정적이지 않고, 수가 커짐에 따라 크기가 커질 수 있음
+  단, 일반적으론 아래와 같음
+  int : 4 Byte
+  float : 8 Byte
+* 128 MB 크기의 int 형 배열
+  128 MB = 128 * 1024 * 1024 Bytes = 134,217,728 Bytes
+  → 134,217,728 / 4 = 33,554,432 길이의 int 배열
+* [Python의 데이터 타입 크기 및 기억 범위](https://ilikemediumrare.tistory.com/5)
+* [메모리 계산](https://zoosso.tistory.com/995)
 
-# 유형
-3.  완전탐색 (Exhaustive Search)
-	* Brute Force
-	* 비트마스크
-	* 재귀함수를 이용한 백트래킹
-	* 순열을 이용해서 모든 경우를 중복 없이 다 해보는 방법
-	* BFS / DFS
-	* Meet In the Middle (BOJ 1208, 7453, 1450)
-4. 그래프 이론
-	- 인접 행렬, 인접 리스트, 간선 리스트
-5. 그래프 이론 2
-	- 다익스트라, 플로이드워셜, 벨만포드
-	- 최소 신장 스패닝 트리(MST), 크루스칼
-	- 이분그래프(Bipartite Graph)
-		- BFS
-		- 이분그래프 찾는 방법
-		- 연결 그래프인지, 비연결 그래프인지 구분
-	- [순환 그래프](https://jackpot53.tistory.com/92)
-	- 
-1. 그리디 알고리즘
-2. 순열, 조합, 중복순열, 중복조합
-3. 문자열
-4. 분할정복
-	- 이분탐색, 머지 소트, 퀵 소트
-5. 이분탐색
-6. Union Find, Disjoint Set
-7. Flood Fill
-8. 정렬
-9. 트리
-	- 순회 종류 : Pre, In, Post)
-	- 트리 지름 계산
-10. 진법변환
-11. Heap, Priority Queue
-12. 문자열 알고리즘
-	- KMP
-13. 수학
-	- 소수, 최소공배수, 최대공약수, 소인수분해, 팩토리얼
-14. 구간 최소값
-	- 슬라이딩 윈도우 알고리즘, 세그먼트 트리, DP, 루트 N 으로 나누기, 2차원 배열에 저장하는 방법, 다 해보는 방법
+**시간 계산**
+* 알고리즘의 실행 속도는 시간복잡도 외에도 영향을 끼치는 속도가 많음
+* 단, 일반적으론 Python3 기준으로 1초에 20,000,000 번의 계산으로 전제함
+	```python
+	import time
+
+	# CASE 1
+	# O(N), N = 20_000_000
+	time_before = time.time()
+	a = 0
+	for i in range(20_000_000):
+		a += i
+	print("DURATION : ", time.time() - time_before) # 1.191xxxx
+	print(a)
+	
+	  
+	# CASE 2
+	# O(N*M), N = 50_000, M = 400, N * M = 20_000_000
+	time_before = time.time()	
+	a = 0
+	for i in range(50_000):
+		for j in range(400):
+			a += j
+	print("DURATION : ", time.time() - time_before) # 1.0750xxx
+	print(a)
+	```
+* 시간 복잡도의 허용 범위 내에서 N 의 최대 크기는 아래 표를 참조하면 안전할 수 있음![timecomplexity.png](./_imgsrc/timecomplexity.png)
+* 실제 시험 땐, 각 변수의 최대값을 입력하여 시간을 측정해보는 것까지 포함할 것
+* [파이썬 시간 계산](https://wjswhdgur123.tistory.com/74)
 
 
+---
 ## Python3, PyPy3 차이
 
 * 일부 문제는 PyPy3 로 실행했을 때만 시간초과 없이 통과됨
@@ -121,8 +95,8 @@ int형은 4바이트입니다.
 -----------
 ## 문제 구현 (Python)
 
-* 연습 문제 풀이 시, ⚠️ 자주 발생했던 실수 정리 ⚠️ 
-* 구현에 도움되는 내장함수 또는 모듈 정리
+* 연습 문제 풀면서 헷갈렸던 구현들 또는 구현에 도움되는 내장함수 또는 모듈 정리
+  ~~(다시 공부할 때)~~
 
 1. Deep Copy + Slicing
 
@@ -144,8 +118,10 @@ int형은 4바이트입니다.
 	```python
 	a = [[1,2,3,4], [5,6,7,8], [9,10,11,12]]
 	b = [i[::] for i in a]
-	```
 
+	# 3차원 배열의 경우 아래와 같이
+	new_3d = [[j[::] for j in i] for i in old_3d]
+	```
 
 2. 자료구조 별 Visited Check 성능 비교
 	
@@ -162,10 +138,9 @@ int형은 4바이트입니다.
 	print((1,2) in b)
 	```
 
-
 3. 전역 변수 사용
 	
-	**기본 자료형 (Prinimtive Type)**
+	**기본 자료형 (Primitive Type)**
 	- 기본 자료형은 전역적으로 사용할 수 없음
 	- 따라서 특정 함수 내부에서 변수에 접근(조회, 수정)하기 위해선 해당 변수를 전역 #global 선언 하거나, 
 	- \[Cheat\] 값 자체를 길이 1 인 리스트 (a = \[0\]) 로 선언하여 전역 처럼 접근하는 방법이 있음
@@ -297,10 +272,13 @@ int형은 4바이트입니다.
 	
 	**메모리 재할당**
 	* 파이썬은 필요한 메모리 양이 바뀔 경우, 다시 메모리를 할당 받음
-	  재할당 시 뒷 공간이 충분하다면 그냥 늘리면 되지만, 공간이 없다면 할당 영역을 옮기고 재할당 해야함
-	* 따라서 빈번한 메모리 재할당은 새로운 메모리를 할당 받아야하므로 가급적 피하는 것이 좋음
+	  (재할당 시 뒷 공간이 충분하다면 그냥 들림)
+	* 재할당 과정에서 새로운 주소로 옮길 경우 시간이 많이 소요됨
 	* for 문을 통해 많은 양의 데이터를 list 에 추가하는 경우가 이에 해당됨
-	  Case 5 와 나머지를 비교했을 때, 메모리 사용량이 크게 차이남 
+
+	**결과 요약**
+	* Case 1 의 소요 시간이 압도적으로 높음
+	* Case 3 의 append 방식이 생각보다 시간이 오래 소요되지 않았음
 	
 	```PYTHON
 	import time
@@ -397,51 +375,29 @@ int형은 4바이트입니다.
 
 	```python
 	import time
-
 	import random
 	
-	  
-	
 	before = time.time()
-	
 	a = [0] * 1_000_000
-	
 	print("[0] * N : ", time.time()-before, "s")
-	
 	print()
 	
-	  
-	
 	before = time.time()
-	
 	a = [0 for _ in range(1_000_000)]
-	
 	print("0 - COMPREHENSION : ", time.time()-before, "s")
-	
 	print()
-	
-	  
-	  
-	
+
+	before = time.time()
 	for _ in range(1_000_000):
-	
-	a.append(random.randint(1, 10000))
-	
+		a.append(random.randint(1, 10000))
 	print("RANDOM APPEND : ", time.time()-before, "s")
-	
 	print()
-	
-	  
 	
 	before = time.time()
-	
 	a = [random.randint(1, 10000) for _ in range(1_000_000)]
-	
 	print("RANDOM COMPREHENSION : ", time.time()-before, "s")
-	
 	print()
 	```
-
 
 10. Lambda 함수 활용
 
@@ -528,17 +484,44 @@ int형은 4바이트입니다.
 	* sorted, reversed 는 메모리를 2 배 사용하기 때문
 
 18. 그래프 사이클 찾기
-
-	* 무방향 그래프인 경우 Union Find
-	  Union 시, 두 노드의 부모가 같으면 사이클이 존재
-	* 방향 그래프인 경우 DFS
-	  방문했던 Edge 가 있는지, 즉, 백 엣지가 있는지로 판단
-
-
 	
-	
+	* Union Find, DFS
 
-1. if (a_r, a_c) == (b_r, b_c) == (c_r, c_c): continue
-2. recursion limut
-	* https://fuzzysound.github.io/sys-setrecursionlimit
-	* 1000 으로 매우 낮음
+19. recursion limit
+    
+	* Python 의 기본 재귀 깊이 제한은 1000 으로, 매우 얕은 편
+	* 따라서 재귀를 사용하여 해결할 경우 이를 풀어줘야 함
+	* [블로그](https://fuzzysound.github.io/sys-setrecursionlimit)
+	```python
+	sys.setrecurionlimit(10 ** 6)
+	```
+
+
+---
+## 팁
+
+1. 중복 제거를 위해선 set 을 사용
+2. 냅색 중복 허용되는 문제
+3. 
+
+
+---
+## 공부순서 참고
+
+* [알고리즘 공부 순서 VELOG](https://velog.io/@cxxerry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B3%B5%EB%B6%80-%EC%88%9C%EC%84%9C)
+* [알고리즘 공부 순서 - 문제 정리](https://patiencelee.tistory.com/1072)
+* [한 장으로 보는 알고리즘 공부 순서](https://velog.io/@ngngs/%ED%95%9C-%EC%9E%A5%EC%9C%BC%EB%A1%9C-%EB%B3%B4%EB%8A%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
+
+
+---
+## 학습 전
+
+* 완전탐색 → Meet In the Middle (BOJ 1208, 7453, 1450)
+* 벨만포드
+* 크루스칼(MST)
+* 문자열 알고리즘
+  KMP
+* 이분탐색
+* 트리 지름 계산
+* 슬라이딩 윈도우
+* 세그먼트 트리

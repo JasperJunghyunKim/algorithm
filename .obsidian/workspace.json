@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_Categories/wip ExhaustiveSearch.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0144c4f9152de6fc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,47 +146,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "floating": {
-    "id": "8a13162f947826bc",
-    "type": "floating",
-    "children": [
-      {
-        "id": "13e9f48f5c8b0037",
-        "type": "window",
-        "children": [
-          {
-            "id": "70be2fb29a20f7cd",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "4d2df2dbcd77fb86",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "_Categories/DFS.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 873,
-        "y": -1055,
-        "width": 960,
-        "height": 1055,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "0144c4f9152de6fc",
+  "active": "cb90086e72787a13",
   "lastOpenFiles": [
-    "_Categories/DFS.md",
+    "algorithms/Knapsack.md",
     "README.md",
+    "BOJ_SOLVED_AC/17143-1.py",
+    "BOJ_SOLVED_AC/16235-1.py",
+    "algorithms/_imgsrc/timecomplexity.png",
+    "_Categories/DFS.md",
     "_Categories/BFS.md",
     "_Categories/wip ExhaustiveSearch.md",
     "_Categories/Dijkstra.md",
@@ -222,8 +176,6 @@
     "_Categories/wip Graph.md",
     "_Categories/wip FloodFill.md",
     "_Categories/_Template.md",
-    "BOJ_SOLVED_AC/12100-1.py",
-    "BOJ_SOLVED_AC/13460-1.py",
     "완전이진트리.md",
     "_Categories/wip BellmanFord.md",
     "Screenshot 2024-03-29 at 12.40.31 PM.png",
