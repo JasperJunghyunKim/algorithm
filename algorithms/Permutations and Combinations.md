@@ -6,79 +6,139 @@
 
 ### ⚠️ 주의 ⚠️
 
-* 조합을 생성하는 BackTracking 함수를 예로, boolean list 체크 방식과 새로운 리스트에 아이템을 직접 추가하는 방식이 있음
-* 이때, 조합을 만드는 것은 boolean list 방식이 빠름
-  (매 재귀마다 아이템을 추가하는 overhead 가 없으므로)
-* 단, 실제 조합 리스트를 추출하기까진 후자 방식이 빠름
-  (boolean list 방식은, check 여부를 판단하여 리스트를 만들어 내는 overhead 가 존재하기 때문)
-  즉, O(N) 이 더 소요됨
-	``` python
-	import time
-	numbers = [i for i in range(1, 21)]
-	number_check = [False for _ in range(20)]
-	LEN_NUMBERS = len(numbers)
+* BackTracking 을 사용하여 경우의 수를 고려하는 예로, 대표적으로, Visited 리스트를 사용하여 boolean 체크하는 방식과 새로운 리스트 생성하여 다음 재귀 함수의 인자로 넘겨주는 방식이 있음
+* 30C15 조합을 계산하는 것을 예로, 각 방식의 속도 비교
+* Combination 1 : visited check 사용하는 방식
+* Combination 2: 함수 인자로 리스트를 넘겨주되, 리스트에 아이템을 더히기 연산으로 추가하여 새로운 리스트를 넘겨주는 방식
+* Combination 3: 함수 인자로 리스트를 넘겨주되, append, pop 방식을 사용
 
-	def combination(cnt, r, idx):
-		global g_cnt
-		global g_test_summation
-		if cnt == r:
-			for i in range(LEN_NUMBERS):
-				if number_check[i]: g_test_summation += numbers[i]
-			g_cnt += 1
-			return
-	for i in range(idx, LEN_NUMBERS):
-		number_check[i] = True
-		combination(cnt + 1, r, i + 1)
-		number_check[i] = False
-
-	def combination2(l, cnt, r, idx):
-		global g_cnt
-		global g_test_summation
-		if cnt == r:
-			g_cnt += 1
-			return
-		for i in range(idx, LEN_NUMBERS):
-			combination2(l + [numbers[i]], cnt + 1, r, i + 1)
-
-	def combination3(l, cnt, r, idx):
-		global g_cnt
-		global g_test_summation
-		if cnt == r:
-			g_cnt += 1
-			return
-		for i in range(idx, LEN_NUMBERS):
-			nl = l[::]
-			nl.append(numbers[i])
-			combination3(nl, cnt + 1, r, i + 1)
-
-	# 시간 측정
-	g_cnt = 1
-	g_test_summation = 0
-	start_time = time.time()
-	combination(0, 9, 0)
-	print("combination 1 : Using Boolean Check List")
-	print(g_test_summation)
-	print(g_cnt)
-	print(time.time() - start_time)
+**TEST 1 : 경우의 수만 추출하는 경우**
+* 전체 경우의 수만 추출하고, 각 조합 자체는 접근하지 않을 경우
+* 실행 시간 : `Comb 1 << Comb3 << Comb2`
+  Visited 만 체크하면 되므로 Comb 1 가 압도적으로 빠름
+  (하지만 대부분의 문제에선 전체 경우의 수만 추출하는 경우는 잘 없고, 대부분 각 조합 자체를 순회하여 함수를 추가로 돌려야 함)
+* 의외로 list 를 직접 append 하고 pop 하는 Case 3 의 방식도 빠름
+	```powershell
+	COMBINATION 1
+	SUM :  0
+	CNT :  155117520
+	TIME :  57.03505492210388
 	
-	g_cnt = 1
-	g_test_summation = 0
-	start_time = time.time()
-	combination2([], 0, 9, 0)
-	print("combination 2 : By adding an item directly to new list")
-	print(g_test_summation)
-	print(g_cnt)
-	print(time.time() - start_time)
+	COMBINATION 2
+	SUM :  0
+	CNT :  155117520
+	TIME :  90.94562983512878
 	
-	g_cnt = 1
-	g_test_summation = 0
-	start_time = time.time()
-	combination3([], 0, 9, 0)
-	print("combination 3 : By adding an item using append method to new list")
-	print(g_test_summation)
-	print(g_cnt)
-	print(time.time() - start_time)
+	COMBINATION 3
+	SUM :  0
+	CNT :  155117520
+	TIME :  63.16774916648865
 	```
+
+ **TEST 2 : 각 경우의 조합 자체에 접근해야되는 경우**
+ * `r == 15`  인 각각의 조합에 대하여 어떠한 연산이 필요할 경우
+ * 실행 시간 : `Comb 3 << Comb2 << Comb1`
+ * Visited 체크 방식은, Length == 15 가 되었을 때, 전체 N 을 순회하여 다시 조합을 생성해야 되므로 속도가 느림 (O(N) 이 더 소요됨) 
+	 ```powershell
+	 COMBINATION 1
+	 SUM :  33738060600
+	 CNT :  155117520
+	 TIME :  204.64266419410706
+	 
+	 COMBINATION 2
+	 SUM :  33738060600
+	 CNT :  155117520
+	 TIME :  167.378897190094
+	 
+	 COMBINATION 3
+	 SUM :  33738060600
+	 CNT :  155117520
+	 TIME :  138.69780707359314
+	```
+
+
+**테스트 코드**
+``` python
+import time
+LEN_NUM = 30
+R = 15
+numbers = [i for i in range(LEN_NUM)]
+
+g_comb1_sum = 0
+g_comb2_sum = 0
+g_comb3_sum = 0
+g_comb1_cnt = 0
+g_comb2_cnt = 0
+g_comb3_cnt = 0
+
+
+# COMBINATION 1
+selected = [False] * LEN_NUM
+def combination1(length, r, idx):
+	global g_comb1_sum
+	global g_comb1_cnt
+	if length == r:
+		g_comb1_cnt += 1
+		for i in range(LEN_NUM):
+			if selected[i]:
+				g_comb1_sum += numbers[i]
+		return
+	for i in range(idx, LEN_NUM):
+		selected[i] = True
+		combination1(length + 1, r, i + 1)
+		selected[i] = False
+  
+time_before = time.time()
+print("COMBINATION 1")
+combination1(0, R, 0)
+print("SUM : ", g_comb1_sum)
+print("CNT : ", g_comb1_cnt)
+print("TIME : ", time.time() - time_before)
+
+  
+# COMBINATION 2
+def combination2(comb_list, length, r, idx):
+	global g_comb2_sum
+	global g_comb2_cnt
+	if length == r:
+		g_comb2_cnt += 1
+		for i in comb_list:
+			g_comb2_sum += i
+		return
+	for i in range(idx, LEN_NUM):
+	combination2(comb_list + [numbers[i]], length + 1, r, i + 1)
+
+time_before = time.time()
+print("COMBINATION 2")
+combination2([], 0, R, 0)
+print("SUM : ", g_comb2_sum)
+print("CNT : ", g_comb2_cnt)
+print("TIME : ", time.time() - time_before)
+
+  
+# COMBINATION 3
+def combination3(comb_list, length, r, idx):
+	global g_comb3_sum
+	global g_comb3_cnt
+	if length == r:
+		g_comb3_cnt += 1
+		for i in comb_list:
+			g_comb3_sum += i
+		return
+	for i in range(idx, LEN_NUM):
+		comb_list.append(numbers[i])
+		combination3(comb_list, length + 1, r, i + 1)
+		comb_list.pop()
+
+time_before = time.time()
+print("COMBINATION 3")
+combination3([], 0, R, 0)
+print("SUM : ", g_comb3_sum)
+print("CNT : ", g_comb3_cnt)
+print("TIME : ", time.time() - time_before)
+```
+
+
 ---
 ### 구현 - 순열(Permutations)
 
