@@ -28,19 +28,19 @@
 * DP\[C\]\[I\] : 제한 무게가 C  일 때, I 번째 아이템을 선택할 때의 최적해
 * [DP](DP.md) 알고리즘에 해당
 ```python
-	dp = [[0] * NUM_ITEMS] * (MAX_CAPA + 1)
+dp = [[0] * NUM_ITEMS] * (MAX_CAPA + 1)
 
-	# 0 번째 아이템 초기화
+# 0 번째 아이템 초기화
+for c in range(MAX_CAPA + 1):
+	dp[c][0] = items[0][value] if c >= items[0][weight] else 0
+
+# 1 번째 아이템부터 마지막까지
+for i in range(1, NUM_ITEMS):
 	for c in range(MAX_CAPA + 1):
-		dp[c][0] = items[0][value] if c >= items[0][weight] else 0
-
-	# 1 번째 아이템부터 마지막까지
-	for i in range(1, NUM_ITEMS):
-		for c in range(MAX_CAPA + 1):
-			if items[i][weight] <= c:
-				dp[c][i] = max(dp[c][i-1], items[i][value] + dp[c - items[i][weight]][i-1])
-			else:
-				dp[c][i] = dp[c][i-1]
+		if items[i][weight] <= c:
+			dp[c][i] = max(dp[c][i-1], items[i][value] + dp[c - items[i][weight]][i-1])
+		else:
+			dp[c][i] = dp[c][i-1]
 ```
 
 
@@ -118,24 +118,24 @@ for weight, value in items:
 * 각 아이템에 대하여, promising 을 순회했으면, temp 딕셔너리를 기존 promising 에 업데이트
 
 ```python
-	items = [...] # (weight, value)
-	items.sort(reverse = True)
+items = [...] # (weight, value)
+items.sort(reverse = True)
 
-	promising = {0:0}
+promising = {0:0}
 
-	for item_w, item_v in items:
-		temp = {} # 나중에 promising 에 업데이트 할 임시 딕셔너리 
-		for promising_v, promising_w in promising.items():
-			new_v = promising_v + item_v
-			new_w = promising_w + item_w
-			# 새로 계산된 무게(new_w)는 MAX_CAPA 보다 작아야 promising 에 추가할 수 있음
-			# 기존에 없던 가치(new_v)라면 promising 에 추가
-			# 기존에 있던 가치(new_v)라도 기존 무게보다 작으면 업데아트
-			if new_w <= MAX_CAPA and (new_v not in promising or promising[new_v] > new_w):
-				temp[new_v] = new_w
-		promising.update(temp)
+for item_w, item_v in items:
+	temp = {} # 나중에 promising 에 업데이트 할 임시 딕셔너리 
+	for promising_v, promising_w in promising.items():
+		new_v = promising_v + item_v
+		new_w = promising_w + item_w
+		# 새로 계산된 무게(new_w)는 MAX_CAPA 보다 작아야 promising 에 추가할 수 있음
+		# 기존에 없던 가치(new_v)라면 promising 에 추가
+		# 기존에 있던 가치(new_v)라도 기존 무게보다 작으면 업데아트
+		if new_w <= MAX_CAPA and (new_v not in promising or promising[new_v] > new_w):
+			temp[new_v] = new_w
+	promising.update(temp)
 
-	print(max(promising.keys()))
+print(max(promising.keys()))
 ```
 
 
