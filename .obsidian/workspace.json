@@ -148,8 +148,9 @@
   },
   "active": "cb90086e72787a13",
   "lastOpenFiles": [
-    "algorithms/DP.md",
     "README.md",
+    "algorithms/Knapsack.md",
+    "algorithms/DP.md",
     "algorithms/Dijkstra.md",
     "algorithms/DFS.md",
     "algorithms/BFS.md",
@@ -157,7 +158,6 @@
     "algorithms/Permutations and Combinations.md",
     "14889-2.py",
     "Untitled-1",
-    "algorithms/Knapsack.md",
     "BOJ_SOLVED_AC/17143-1.py",
     "BOJ_SOLVED_AC/16235-1.py",
     "algorithms/_imgsrc/timecomplexity.png",
