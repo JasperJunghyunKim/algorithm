@@ -1,71 +1,32 @@
-import time
-LEN_NUM = 30
-R = 15
-numbers = [i for i in range(LEN_NUM)]
+import sys
+sys_input = sys.stdin.readline
 
-g_comb1_sum = 0
-g_comb2_sum = 0
-g_comb3_sum = 0
-g_comb1_cnt = 0
-g_comb2_cnt = 0
-g_comb3_cnt = 0
+NUM_ITEM, MAX_CAPA = map(int, sys_input().strip().split())
+W, V = 0, 1
+items = []
+for _ in range(NUM_ITEM):
+    items.append(tuple(map(int, sys_input().strip().split())))
 
-selected = [False] * LEN_NUM
-def combination1(length, r, idx):
-    global g_comb1_sum
-    global g_comb1_cnt
-    if length == r:
-        g_comb1_cnt += 1
-        for i in range(LEN_NUM):
-            if selected[i]:
-                g_comb1_sum += numbers[i]
-        return
-    for i in range(idx, LEN_NUM):
-        selected[i] = True
-        combination1(length + 1, r, i + 1)
-        selected[i] = False
+# # dp 1 차원
+# dp = [0] * (MAX_CAPA + 1)
+# for i in range(NUM_ITEM):
+#     for c in range(MAX_CAPA, -1, -1):
+#         if items[i][W] <= c:
+#             dp[c] = max(dp[c], items[i][V] + dp[c - items[i][W]])
+# print(dp[MAX_CAPA])
 
-time_before = time.time()
-print("COMBINATION 1")
-combination1(0, R, 0)
-print("SUM : ", g_comb1_sum)
-print("CNT : ", g_comb1_cnt)
-print("TIME : ", time.time() - time_before)
+# 향상된 DP
+items.sort(reverse = True)
+promising = {0:0}
+for w, v in items:
+    tmp = {}
+    for v_promising, w_promising in promising.items():
+        # 
+        new_v = v_promising + v
+        new_w = w_promising + w
+        if (new_v not in promising or promising[new_v] > new_w) and new_w <= MAX_CAPA:
+            tmp[new_v] = new_w
+        
+    promising.update(tmp)
 
-def combination2(comb_list, length, r, idx):
-    global g_comb2_sum
-    global g_comb2_cnt
-    if length == r:
-        g_comb2_cnt += 1
-        for i in comb_list:
-            g_comb2_sum += i
-        return
-    for i in range(idx, LEN_NUM):
-        combination2(comb_list + [numbers[i]], length + 1, r, i + 1)
-
-time_before = time.time()
-print("COMBINATION 2")
-combination2([], 0, R, 0)
-print("SUM : ", g_comb2_sum)
-print("CNT : ", g_comb2_cnt)
-print("TIME : ", time.time() - time_before)
-
-def combination3(comb_list, length, r, idx):
-    global g_comb3_sum
-    global g_comb3_cnt
-    if length == r:
-        g_comb3_cnt += 1
-        for i in comb_list:
-            g_comb3_sum += i
-        return
-    for i in range(idx, LEN_NUM):
-        comb_list.append(numbers[i])
-        combination3(comb_list, length + 1, r, i + 1)
-        comb_list.pop()
-
-time_before = time.time()
-print("COMBINATION 3")
-combination3([], 0, R, 0)
-print("SUM : ", g_comb3_sum)
-print("CNT : ", g_comb3_cnt)
-print("TIME : ", time.time() - time_before)
+print(max(promising.keys()))

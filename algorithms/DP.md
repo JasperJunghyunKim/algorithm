@@ -24,17 +24,17 @@
 1. DP 배열의 점화식을 찾는다. 2, 3차원 배열이될 수도 있으며, 배열 간 서로 영향을 줄 수도 있음
 2. Bottom Up 또는 Top Down 중 적절한 방식으로 구현한다.
 
-### 구현_Bottom Up (Tabulation 방식)
+### 구현 Bottom Up (Tabulation 방식)
 
 * 작은 문제부터 차례대로 해결하면서 그 결과를 테이블에 저장하고, 이 테이블 값을 이용하여 점차 큰 문제의 해결책을 구성해 나감
 * 일반적으로 반복문을 이용하여 구현
 
-### 구현_Top Down (Memoization 방식)
+### 구현 Top Down (Memoization 방식)
 
 * 큰 문제를 작은 부분 문제로 나누어 해결하는 방식
 * 이를 위해 재귀함수를 사용하여 문제를 작은 부분 문제로 쪼개고, 중복되는 계산을 피하기 위해 Memoization 을 활용
 
-### 구현 비교 - Top Down vs Bottom Up
+### 구현 비교 Top Down vs Bottom Up
 
 * 둘 다 공통적으로 한 번 계산된 값을 저장하는 특징이 있음
 

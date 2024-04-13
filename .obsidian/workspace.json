@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algorithms/Permutations and Combinations.md",
+                "file": "algorithms/Knapsack.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "algorithms/Permutations and Combinations.md",
+                "file": "algorithms/Knapsack.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "algorithms/Permutations and Combinations.md",
+                "file": "algorithms/Knapsack.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "algorithms/Permutations and Combinations.md"
+                "file": "algorithms/Knapsack.md"
               }
             }
           }
@@ -148,7 +148,12 @@
   },
   "active": "cb90086e72787a13",
   "lastOpenFiles": [
+    "algorithms/DP.md",
     "README.md",
+    "algorithms/Dijkstra.md",
+    "algorithms/DFS.md",
+    "algorithms/BFS.md",
+    "algorithms/BackTracking.md",
     "algorithms/Permutations and Combinations.md",
     "14889-2.py",
     "Untitled-1",
@@ -181,8 +186,6 @@
     "_Categories/wip BellmanFord.md",
     "Screenshot 2024-03-29 at 12.40.31 PM.png",
     "_DataStructures/PriorityQueue.md",
-    "_DataStructures/Heap.md",
-    "().md",
     "Untitled.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas"
