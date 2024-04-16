@@ -20,12 +20,13 @@
 ### 구현_기본
 
 1. **make_set** 
-	각각의 N 개 원소에 대하여 대표(즉, root)가 되도록 하는 N 개의 집합을 생성
+	* 각각의 N 개 원소에 대하여 대표(즉, root)가 되도록 하는 N 개의 집합을 생성
 2. **find(x)** 
-	원소 x 의 root 를 찾음
-	즉, 원소 x 가 어떤 집합에 포함 되었는지 찾는 함수
-3. **union(x, y)**
-   y 의 root 를 x 로 설정하여, 같은 집합이 되도록 하는 함수
+	* 원소 x 의 root 를 찾음
+	* 즉, 원소 x 가 어떤 집합에 포함 되었는지 찾는 함수
+1. **union(x, y)**
+	* y 의 root 를 x 의 root 로 설정하여, 같은 집합이 되도록 하는 함수
+	* root 에 대한 연산
 ``` Python 3
 # make_set
 for i in range(1, n + 1):
@@ -81,7 +82,7 @@ def union(a, b)
 ### 유형
 1. 두 집합이 합쳐지면서 capacity 가 늘어나고, 해당 집합에 포함되는 대상의 개수(size)가 capacity 를 초과하지 않는지를 확인하는 문제
 	- [방청소](https://www.acmicpc.net/problem/9938)
-2. [wip Kruskal (MST)](wip%20Kruskal%20(MST).md) MST 알고리즘
+2. [Kruskal (MST)](Kruskal%20(MST).md) MST 알고리즘
 
 
 ---

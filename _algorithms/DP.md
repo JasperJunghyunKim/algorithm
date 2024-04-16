@@ -110,7 +110,7 @@
 	
 5. [계단오르기](https://www.acmicpc.net/problem/2579)
 	$$dp[i] = max(step[i] + step[i-1] + dp[i-3], step[i] + dp[i-2])$$
-	* dp\[i\] 는 i 째 계단을 무조건 밟았을 때의 최대값
+	* dp\[i\] 는 i 째 계단을 '무조건' 밟았을 때의 최대값
 	* step\[i\] + step\[i-1\] + dp\[i-3\]
 	  i - 2 째를 밟지 않는 경우가 포함되어 있음
 	* step\[i\] + dp\[i-2\]

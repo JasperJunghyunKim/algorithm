@@ -39,6 +39,7 @@
  * `r == 15`  인 각각의 조합에 대하여 어떠한 연산이 필요할 경우
  * 실행 시간 : `Comb 3 << Comb2 << Comb1`
  * Visited 체크 방식은, Length == 15 가 되었을 때, 전체 N 을 순회하여 다시 조합을 생성해야 되므로 속도가 느림 (O(N) 이 더 소요됨) 
+ * [치킨배달](https://www.acmicpc.net/problem/15686) 문제 T1 과 T2 의 실행시간 2 배 차이난 것이 이 것 때문에 발생함
 	 ```powershell
 	 COMBINATION 1
 	 SUM :  33738060600
