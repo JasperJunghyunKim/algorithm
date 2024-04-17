@@ -22,6 +22,7 @@
 	* 선형탐색 O(N) 보다 시간복잡도를 개선 
 	  $$O(log_{2}N)$$
 * 반복문
+	* `low <= high` 조건 주의 : 같을 때까지 실행하지 않으면(등호를 빼면), target 을 찾을 수 없음
 	```python
 	def binary_search(array, target):
 		low, high = 0, len(array) - 1
@@ -79,6 +80,20 @@ print(biset_right(a,x) - bisect_left(a,x)) # 4 개
 
 ---
 ### D. 유형
+
+1. Parametric Search
+	* 최적화 문제를 결정 문제로 바꾸어 해결 하는 것
+		* 최적화 문제, 즉, 문제의 상황을 만족하는 최소값(또는 최대값)을 구하는 문제를, 최소값(또는 최대값)일 때 결정하는 문제로 바꾸어 해결
+	* 어떠한 타겟을 최소 N 을 만들기 위해, 최대 크기 M 의 수단을 구하는 문제
+		* ⚠️ while 을 탈출했을 때, 어떤 값을 리턴하는지 잘 확인할 것
+		* 예) [랜선 자르기](https://www.acmicpc.net/problem/1654), [나무 자르기](https://www.acmicpc.net/problem/2805) 
+		* 자를 길이를 이분 탐색으로 접근
+		* 최소 N 조건을 만족할 경우, `low = mid + 1` 하여 탐색 하한 범위를 늘려서, 더 큰 M 을 찾음
+		* 조건을 만족하지 않을 경우, `high = mid - 1` 하여 탐색 상한 범위를 줄여서, 더 작은 M 을 찾음
+		* 최대를 찾는 문제이므로 <u>high 값 반환</u>
+	* 어떠한 타겟을 최대 N 을 만들기 위해, 최대 크기 M 의 수단을 구하는 문제
+		* 예) [입국 심사](https://school.programmers.co.kr/learn/courses/30/lessons/43238)
+		* 최소를 찾는 문제이므로 <u>low 값 반환</u>
 
 ### E. 참고
 

@@ -30,21 +30,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "2540bab2f50185d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_algorithms/BFS.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_algorithms/BFS.md",
+                "file": "_algorithms/Binary Search.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_algorithms/BFS.md",
+                "file": "_algorithms/Binary Search.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_algorithms/BFS.md"
+                "file": "_algorithms/Binary Search.md"
               }
             }
           }
@@ -171,28 +159,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2540bab2f50185d5",
+  "active": "d6417288a1e5dbbb",
   "lastOpenFiles": [
-    "1107-1.py",
-    "1476-1.py",
-    "1476-1.pu",
-    "_PROGRAMMERS/퍼즐조각채우기-1.py",
-    "1654-1.py",
-    "_algorithms/Exhaustive Search.md",
+    "_PROGRAMMERS/전력망을둘로나누기-1.py",
+    "_PROGRAMMERS/전력망을둘로나누기-2.py",
+    "_PROGRAMMERS/전력망둘로나누기-2.py",
+    "_PROGRAMMERS/전화번호목록-1.py",
+    "_PROGRAMMERS/전화번호목록-2.py",
+    "_PROGRAMMERS/여행경로-5.py",
+    "_BOJ_SOLVED_AC/10610-1.py",
+    "_BOJ_SOLVED_AC/7562-1.py",
+    "_BOJ_SOLVED_AC/1613-2.py",
+    "_BOJ_SOLVED_AC/1613-1.py",
+    "_BOJ_SOLVED_AC/11403-1.py",
+    "README.md",
     "_algorithms/BFS.md",
+    "_algorithms/Exhaustive Search.md",
     "_algorithms/Binary Search.md",
     "_algorithms/_template.md",
     "_algorithms/BackTracking.md",
     "_algorithms/wip BellmanFord.md",
-    "10799-1.py",
-    "4920-1.py",
     "_algorithms/wip 문자열 알고리즘.md",
-    "_PROGRAMMERS/입국심사-1.py",
     "_algorithms/Kruskal (MST).md",
-    "_BOJ_SOLVED_AC/7682-1.py",
-    "README.md",
-    "1251.py",
-    "_SWEA",
     "algorithms/Kruskal (MST).md",
     "_algorithms/_imgsrc/greedy_dp.png",
     "_algorithms/_imgsrc/timecomplexity.png",
