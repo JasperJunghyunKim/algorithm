@@ -18,7 +18,7 @@
 * Visited 만 체크하면 되므로 Comb 1 가 압도적으로 빠름
   (하지만 대부분의 문제에선 전체 경우의 수만 추출하는 경우는 잘 없고, 대부분 각 조합 자체를 순회하여 함수를 추가로 돌려야 함)
 * 의외로 list 를 직접 append 하고 pop 하는 Case 3 의 방식도 빠름
-	```powershell
+```powershell
 	COMBINATION 1
 	SUM :  0
 	CNT :  155117520
@@ -33,29 +33,29 @@
 	SUM :  0
 	CNT :  155117520
 	TIME :  63.16774916648865
-	```
+```
 
  **TEST 2 : 각 경우의 조합 자체에 접근해야되는 경우**
  * `r == 15`  인 각각의 조합에 대하여 어떠한 연산이 필요할 경우
  * 실행 시간 : `Comb 3 << Comb2 << Comb1`
  * Visited 체크 방식은, Length == 15 가 되었을 때, 전체 N 을 순회하여 다시 조합을 생성해야 되므로 속도가 느림 (O(N) 이 더 소요됨) 
- * [치킨배달](https://www.acmicpc.net/problem/15686) 문제 T1 과 T2 의 실행시간 2 배 차이난 것이 이 것 때문에 발생함
-	 ```powershell
-	 COMBINATION 1
-	 SUM :  33738060600
-	 CNT :  155117520
-	 TIME :  204.64266419410706
+* [치킨배달](https://www.acmicpc.net/problem/15686) 문제 T1 과 T2 의 실행시간 2 배 차이난 것이 이 것 때문에 발생함
+```powershell
+    COMBINATION 1
+    SUM :  33738060600
+    CNT :  155117520
+    TIME :  204.64266419410706
 	 
-	 COMBINATION 2
-	 SUM :  33738060600
-	 CNT :  155117520
-	 TIME :  167.378897190094
+    COMBINATION 2
+    SUM :  33738060600
+    CNT :  155117520
+    TIME :  167.378897190094
 	 
-	 COMBINATION 3
-	 SUM :  33738060600
-	 CNT :  155117520
-	 TIME :  138.69780707359314
-	```
+    COMBINATION 3
+    SUM :  33738060600
+    CNT :  155117520
+    TIME :  138.69780707359314
+```
 
 
 **테스트 코드**

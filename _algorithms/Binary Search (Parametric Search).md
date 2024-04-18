@@ -84,6 +84,8 @@ print(biset_right(a,x) - bisect_left(a,x)) # 4 개
 1. Parametric Search
 	* 최적화 문제를 결정 문제로 바꾸어 해결 하는 것
 		* 최적화 문제, 즉, 문제의 상황을 만족하는 최소값(또는 최대값)을 구하는 문제를, 최소값(또는 최대값)일 때 결정하는 문제로 바꾸어 해결
+	* 어떤 정보를 바이너리 서치할 것인지를 잘 찾아야 함
+		* 예) [입국 심사](https://school.programmers.co.kr/learn/courses/30/lessons/43238) 문제에선, 시간을 기준으로 바이너리 서치를 하여, 그 시간 동안 N 명을 통과시킬 수 있는지 여부로 Up Down 실행
 	* 어떠한 타겟을 최소 N 을 만들기 위해, 최대 크기 M 의 수단을 구하는 문제
 		* ⚠️ while 을 탈출했을 때, 어떤 값을 리턴하는지 잘 확인할 것
 		* 예) [랜선 자르기](https://www.acmicpc.net/problem/1654), [나무 자르기](https://www.acmicpc.net/problem/2805) 
