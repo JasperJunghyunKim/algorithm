@@ -4,40 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "02f8bcce21742456",
+        "id": "7c8d80d930f2b8a2",
         "type": "tabs",
         "children": [
           {
-            "id": "b16f78ce8e11fab0",
+            "id": "096e704e4ec285b1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_algorithms/_template.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d6417288a1e5dbbb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_algorithms/wip 문자열 알고리즘.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "11598bcee05f4676",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_algorithms/wip Sort.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_algorithms/_template.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_algorithms/_template.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_algorithms/_template.md"
+                "file": "README.md"
               }
             }
           }
@@ -170,10 +146,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b16f78ce8e11fab0",
+  "active": "096e704e4ec285b1",
   "lastOpenFiles": [
-    "_algorithms/wip 문자열 알고리즘.md",
+    "_BOJ_SOLVED_AC/1463-4.py",
+    "_BOJ_SOLVED_AC/1463-3.py",
+    "Untitled.md",
+    "README.md",
+    "트리.md",
+    "_algorithms/_imgsrc/graph_tree.png",
     "_algorithms/wip Sort.md",
+    "_algorithms/wip 문자열 알고리즘.md",
+    "_algorithms/Knapsack.md",
+    "_BOJ_SOLVED_AC/2294-1.py",
+    "_BOJ_SOLVED_AC/20002-1.py",
+    "_algorithms/BFS.md",
+    "_algorithms/BackTracking.md",
+    "_algorithms/_template.md",
     "_algorithms/Binary Search (Parametric Search).md",
     "_PROGRAMMERS/징검다리-1.py",
     "_algorithms/Permutations and Combinations.md",
@@ -184,22 +172,13 @@
     "_PROGRAMMERS/전화번호목록-1.py",
     "_PROGRAMMERS/전화번호목록-2.py",
     "_PROGRAMMERS/여행경로-5.py",
-    "_BOJ_SOLVED_AC/10610-1.py",
-    "_BOJ_SOLVED_AC/7562-1.py",
-    "_BOJ_SOLVED_AC/1613-2.py",
-    "README.md",
-    "_algorithms/BFS.md",
     "_algorithms/Exhaustive Search.md",
-    "_algorithms/_template.md",
-    "_algorithms/BackTracking.md",
     "_algorithms/wip BellmanFord.md",
     "algorithms/Kruskal (MST).md",
     "_algorithms/_imgsrc/greedy_dp.png",
     "_algorithms/_imgsrc/timecomplexity.png",
-    "_algorithms/_imgsrc/graph_tree.png",
     "_algorithms/wip Topology Sort.md",
     "_algorithms/Union Find.md",
-    "_algorithms/Knapsack.md",
     "_algorithms/Greedy.md",
     "_algorithms/Graph.md",
     "_algorithms/Floyd-Warshall.md",
@@ -208,9 +187,6 @@
     "_algorithms/Dijkstra.md",
     "_algorithms/DP.md",
     "_algorithms/DFS.md",
-    "algorithms/Dijkstra.md",
-    "algorithms/Union Find.md",
-    "algorithms/DFS.md",
     "algorithms/_imgsrc/timecomplexity.png",
     "Screenshot 2024-03-29 at 12.40.31 PM.png",
     "Untitled.canvas",

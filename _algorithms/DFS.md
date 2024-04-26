@@ -25,7 +25,6 @@
 ```Python
 dfs_visited = [START_V]
 dfs_to_visit = [START_V]
-ㅋ
 while dfs_to_visit:
 	cur_v = dfs_to_visit.pop() # stack
 	for next_v in range(1, NUM_V + 1):

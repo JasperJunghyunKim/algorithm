@@ -1,3 +1,11 @@
+## 참고 링크
+
+* [WIKIDOCS 회사 별 빈출 유형](https://wikidocs.net/book/8284)
+* [알고리즘 공부 순서 VELOG](https://velog.io/@cxxerry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B3%B5%EB%B6%80-%EC%88%9C%EC%84%9C)
+* [알고리즘 공부 순서 - 문제 정리](https://patiencelee.tistory.com/1072)
+* [한 장으로 보는 알고리즘 공부 순서](https://velog.io/@ngngs/%ED%95%9C-%EC%9E%A5%EC%9C%BC%EB%A1%9C-%EB%B3%B4%EB%8A%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
+
+
 ## \[WIP\]시간복잡도, 공간복잡도 (Python3 기준)
 
 **Big-O Notation**
@@ -549,11 +557,7 @@
 
 
 ---
-## 공부순서 참고
 
-* [알고리즘 공부 순서 VELOG](https://velog.io/@cxxerry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B3%B5%EB%B6%80-%EC%88%9C%EC%84%9C)
-* [알고리즘 공부 순서 - 문제 정리](https://patiencelee.tistory.com/1072)
-* [한 장으로 보는 알고리즘 공부 순서](https://velog.io/@ngngs/%ED%95%9C-%EC%9E%A5%EC%9C%BC%EB%A1%9C-%EB%B3%B4%EB%8A%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 
 ---
@@ -561,10 +565,8 @@
 
 * 완전탐색 → Meet In the Middle (BOJ 1208, 7453, 1450)
 * 벨만포드
-* 크루스칼(MST)
 * 문자열 알고리즘
   KMP
-* 이분탐색
 * 트리 지름 계산
 * 슬라이딩 윈도우
 * 세그먼트 트리

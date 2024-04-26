@@ -111,6 +111,8 @@ for weight, value in items:
 
 ### 향상된 DP (Dictionary 사용 방법)
 
+* ⚠️ 아이템의 종류가 많을 경우, DP 배열을 사용하는 방법보다 느려질 수 있음
+	* 딕셔너리를 업데이트 하는 비용이 `O(N)` 소요되기 때문
 * item 을 물건의 무게 기준으로 내림차순 정렬
 * `promising` 이라는 dictionary 를 특정 가치(value)를 만들 수 있는 최소 무게(weight) 로 정의
 	* 가치(value) 가 key 가 되며, 무게(weight) 가 value 가 됨
@@ -127,19 +129,19 @@ for weight, value in items:
 items = [...] # (weight, value)
 items.sort(reverse = True)
 
-promising = {0:0}
+backpack = {0:0}
 
 for item_w, item_v in items:
-	temp = {} # 나중에 promising 에 업데이트 할 임시 딕셔너리 
-	for promising_v, promising_w in promising.items():
-		new_v = promising_v + item_v
-		new_w = promising_w + item_w
-		# 새로 계산된 무게(new_w)는 MAX_CAPA 보다 작아야 promising 에 추가할 수 있음
-		# 기존에 없던 가치(new_v)라면 promising 에 추가
+	temp_backpack = {} # 나중에 promising 에 업데이트 할 임시 딕셔너리 
+	for backpack_v, backpack_w in promising.items():
+		new_v = backpack_v + item_v
+		new_w = backpack_w + item_w
+		# 새로 계산된 무게(new_w)는 MAX_CAPA 보다 작아야 backpack 에 추가할 수 있음
+		# 기존에 없던 가치(new_v)라면 backpack 에 추가
 		# 기존에 있던 가치(new_v)라도 기존 무게보다 작으면 업데아트
-		if new_w <= MAX_CAPA and (new_v not in promising or promising[new_v] > new_w):
-			temp[new_v] = new_w
-	promising.update(temp)
+		if new_w <= MAX_CAPA and (new_v not in backpack or backpack[new_v] > new_w):
+			temp_backpack[new_v] = new_w
+	backpack.update(temp_backpack)
 
 print(max(promising.keys()))
 ```

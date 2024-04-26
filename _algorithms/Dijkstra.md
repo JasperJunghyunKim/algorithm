@@ -6,13 +6,15 @@
 	1. 0 이상의 가중치만 허용 (음의 간선 없어야 함)
 	2. 그래프 양방향, 단방향 가능
 	3. 사이클 가능
+* Linear Approach 또는 Priority Queue 를 이용한 두 가지 방식으로 구현
 * 구현 순서
 	1. 최단 거리 테이블 무한값으로 초기화
 	2. 출발 노드 설정
 	3. 방문하지 않은 노드 중에서, 거리가 가장 짧은 노드를 선택하고 방문 처리
+		- Linear 방식에선, NUM_V 만큼 순회하며, visited 배열을 체크 
+		- <u>PQ(Heap) 방식에선, 최소 노드를 POP하고, 해당 노드가 shortest_d 보다 작은 경우에만 비방문으로 간주</u>
 	4. 해당 노드를 거쳐 다른 노드로 가는 비용을 계산하여, 최단 거리 테이블 갱신
 	5. (3) ~ (4) 반복
-* 선형 탐색 방법과 우선순위 큐(Priority Queue)를 이용한 두 가지 방식으로 구현
 * 모든 지점에서 다른 모든 지점까지의 최단 경로는 [Floyd-Warshall](Floyd-Warshall.md) 을 참고
 
 
@@ -23,22 +25,25 @@
   $$O(N^2)$$
 * 정점의 개수는 많고, 간선의 개수는 적을 경우 시간이 오래걸릴 수 있음	
 ```Python
-def dijkstra(start_node, num_nodes):
-	shortest_distance = [float('inf') for _ in range(num_nodes + 1)]
-	shortest_distance[start_node] = 0
-	visited = [False for _ in range(num_nodes + 1)]
+def dijkstra(start_v):
+	shortest_d = [float('inf')] * (NUM_V + 1)
+	shortest_d[start_v] = 0
+	visited = [False] * (NUM_V + 1)
 
-	for _ in range(num_nodes):
+	for _ in range(NUM_V):
 		# 방문하지 않은 노드 중 최단거리 노드 선택
-		min_distance = float('inf')
-		min_node = 0
-		for next_node in range(1, NUM_V + 1):
-			if not visited[next_node] and shortest_distance[next_node] < min_distance:
-				min_distance = shortest_distance[next_node]
-				min_node = next_node
+		min_d = float('inf')
+		min_v = 0
+		for next_v in range(1, NUM_V + 1):
+			if not visited[next_v] and shortest_d[next_v] < min_d:
+				min_d = shortest_d[next_v]
+				min_v = next_v
 
 		# 해당 노드 방문 처리
-		visited[min_node] = True
+		visited[min_v] = True
+
+		# 최단거리 노드가 선택되지 않으면 종료
+		if min_v == 0: break
 
 		# 해당 노드와 인접한 노드 갱신
 		for adj_node, weight in adj_list[min_node]:
@@ -54,8 +59,8 @@ def dijkstra(start_node, num_nodes):
 ### 구현 Priority Queue
 
 * 시간 복잡도 $$O(NlogN)$$
-* Heap 을 시용하여 PriorityQueue 구현
-* 구현 순서는 선형 탐색과 동일하나, 선형탐색에서 최단 거리가 가장 짧은 노드를 선택하는 과정을 PriorityQueue 로 대체
+* Heap 을 시용하여 Priority Queue 구현
+* 구현 순서는 선형 탐색과 동일하나, 선형탐색에서 최단 거리가 가장 짧은 노드를 선택하는 과정을 Priority Queue 로 대체
 
 ```Python
 import heapq
