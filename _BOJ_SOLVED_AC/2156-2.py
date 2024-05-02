@@ -1,3 +1,10 @@
+#
+# @2024-04-27
+# 점화식
+# dp : i 번째 와인을 시식할 때, 혹은 시삭하지 않을 때의 최대 음수량
+# dp[i] = max(dp[i-1], wine[i] + wine[i-1] + dp[i-3],  wine[i] + dp[i-2])
+#
+
 import sys
 sys_input = sys.stdin.readline
 

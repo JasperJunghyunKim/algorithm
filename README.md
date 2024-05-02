@@ -59,7 +59,8 @@
 	print("DURATION : ", time.time() - time_before) # 1.0750xxx
 	print(a)
 	```
-* 시간 복잡도의 허용 범위 내에서 N 의 최대 크기는 아래 표를 참조하면 안전할 수 있음![timecomplexity.png](./_imgsrc/timecomplexity.png)
+* 시간 복잡도의 허용 범위 내에서 N 의 최대 크기는 아래 표를 참조하면 안전할 수 있음
+  ![timecomplexity.png](./_imgsrc/timecomplexity.png)
 * 실제 시험 땐, 각 변수의 최대값을 입력하여 시간을 측정해보는 것까지 포함할 것
 * [파이썬 시간 계산](https://wjswhdgur123.tistory.com/74)
 
@@ -561,12 +562,3 @@
 
 
 ---
-## 학습 전
-
-* 완전탐색 → Meet In the Middle (BOJ 1208, 7453, 1450)
-* 벨만포드
-* 문자열 알고리즘
-  KMP
-* 트리 지름 계산
-* 슬라이딩 윈도우
-* 세그먼트 트리

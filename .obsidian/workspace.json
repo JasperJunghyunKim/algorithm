@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "7c8d80d930f2b8a2",
+        "id": "2c5fee96e3bfa9db",
         "type": "tabs",
         "children": [
           {
-            "id": "096e704e4ec285b1",
+            "id": "d53a26908d77a660",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,12 +138,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "096e704e4ec285b1",
+  "active": "d53a26908d77a660",
   "lastOpenFiles": [
+    "README.md",
+    "_TOSS/toss3.py",
+    "_TOSS/toss4.py",
+    "_TOSS/toss5.py",
+    "_TOSS/toss6.py",
+    "_TOSS/toss2.py",
+    "_TOSS/toss1.py",
     "_BOJ_SOLVED_AC/1463-4.py",
     "_BOJ_SOLVED_AC/1463-3.py",
     "Untitled.md",
-    "README.md",
     "트리.md",
     "_algorithms/_imgsrc/graph_tree.png",
     "_algorithms/wip Sort.md",
@@ -163,15 +161,8 @@
     "_algorithms/BackTracking.md",
     "_algorithms/_template.md",
     "_algorithms/Binary Search (Parametric Search).md",
-    "_PROGRAMMERS/징검다리-1.py",
     "_algorithms/Permutations and Combinations.md",
     "_algorithms/Kruskal (MST).md",
-    "_PROGRAMMERS/전력망을둘로나누기-1.py",
-    "_PROGRAMMERS/전력망을둘로나누기-2.py",
-    "_PROGRAMMERS/전력망둘로나누기-2.py",
-    "_PROGRAMMERS/전화번호목록-1.py",
-    "_PROGRAMMERS/전화번호목록-2.py",
-    "_PROGRAMMERS/여행경로-5.py",
     "_algorithms/Exhaustive Search.md",
     "_algorithms/wip BellmanFord.md",
     "algorithms/Kruskal (MST).md",
